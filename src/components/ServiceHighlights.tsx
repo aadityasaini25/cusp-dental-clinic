@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ServiceHighlights() {
   const serviceData = [
     {
@@ -75,10 +77,11 @@ export default function ServiceHighlights() {
             >
               <div className="relative rounded-xl mb-5 h-36 md:h-40 flex items-center justify-center overflow-hidden bg-gradient-to-br from-white/5 to-white/0 border border-white/5 p-4 group-hover:border-emerald-500/20 transition-colors duration-500">
                 <div className="absolute inset-0 bg-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
-                  className="max-h-full max-w-full object-contain filter drop-shadow-xl group-hover:scale-105 transition-transform duration-700 ease-out"
+                  fill
+                  className="object-contain filter drop-shadow-xl group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
               <h3 className="font-bold mb-3 text-lg text-white tracking-tight group-hover:text-emerald-400 transition-colors duration-300">{service.title}</h3>
