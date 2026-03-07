@@ -1,19 +1,19 @@
 const points = [
   {
-    title: "Specialist Expertise",
-    desc: "Your care is led by a specialist team: Dr. Shubham Sunil Salunkhe (BDS, MDS – Oral & Maxillofacial Surgery) and Dr. Rasika Salunkhe (BDS, MDS – Prosthodontics). Surgical and prosthetic planning under one roof.",
+    title: "Specialist Team",
+    desc: "Your care is guided by a formidable team of specialist dentists hailing from prestigious institutes including AIIMS, PGI Chandigarh, Maulana Azad, and Army Dental College.",
   },
   {
-    title: "100% Digital Workflow",
-    desc: "From scan to prosthesis, every step is digitally planned. Prosthetic-driven implant placement for predictable, long-term aesthetic and functional outcomes.",
+    title: "Diamond Black Invisalign Provider",
+    desc: "First in North India for the last 2 years to achieve this prestigious status. Experience unparalleled expertise in clear aligner therapy.",
   },
   {
-    title: "Infection Control & Hygiene",
-    desc: "Sterilization and disinfection protocols that meet international standards. Your safety and surgical environment are treated as non-negotiable.",
+    title: "Advanced Technology & Comfort",
+    desc: "Equipped with state-of-the-art in-house digital scanners for precise diagnostics, and nitrous sedation machines to ensure a completely painless, anxiety-free experience.",
   },
   {
-    title: "Personalized Patient Care",
-    desc: "Evidence-based, ethical treatment planning with clear explanations, realistic expectations and long-term follow-up care — especially for full mouth and advanced implant cases.",
+    title: "Fully Digital Workflow & Easy EMI",
+    desc: "From Free Scan & Simulation (Invisalign & Digital Smile Design) to your final treatment, everything is digitally planned. We also offer No-Cost EMI options to make premium care accessible.",
   },
 ];
 
@@ -22,9 +22,9 @@ export default function WhyChooseUs() {
     <section className="py-20 md:py-28 px-4 md:px-8 bg-gray-50/80">
       <div className="max-w-6xl mx-auto">
         <div className="text-center md:text-left mb-12">
-          <p className="text-[#485b51] font-semibold text-sm uppercase tracking-[0.2em] mb-2">Why Face Max</p>
+          <p className="text-[#485b51] font-semibold text-sm uppercase tracking-[0.2em] mb-2">Why Cusp Dental</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">
-            Why Choose Face Max Clinic
+            Why Choose Cusp Dental Clinic
           </h2>
           <div className="w-16 h-0.5 bg-[#d4af37] rounded-full mx-auto md:mx-0" />
         </div>

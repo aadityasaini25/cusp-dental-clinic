@@ -24,7 +24,7 @@ export default function BeforeAfterGallery({ onBookAppointment }: BeforeAfterGal
         {/* Heading */}
         <div className="text-center mb-8">
           <div className="text-[#485b51] text-sm md:text-base font-medium mb-2">
-            Face Max Dental Clinic
+            Cusp Dental Clinic
           </div>
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
             Patient Success Stories
@@ -61,7 +61,7 @@ export default function BeforeAfterGallery({ onBookAppointment }: BeforeAfterGal
             Ready for Your <span className="text-[#485b51]">Smile Transformation?</span>
           </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Join hundreds of satisfied patients who have transformed their smiles with Dr. Shubham Sunil Salunkhe&apos;s expertise. Book your consultation today and take the first step towards your dream smile.
+            Join hundreds of satisfied patients who have transformed their smiles with Dr. Mohit Dhiman&apos;s expertise. Book your consultation today and take the first step towards your dream smile.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
@@ -71,10 +71,10 @@ export default function BeforeAfterGallery({ onBookAppointment }: BeforeAfterGal
               Book Consultation
             </button>
             <a
-              href="tel:+918080697453"
+              href="tel:+919999751071"
               className="bg-[#485b51] text-white px-8 py-3 rounded-lg font-bold text-lg hover:opacity-90 transition-colors text-center"
             >
-              Call Now: +91 80806 97453
+              Call Now: +91 99997 51071
             </a>
           </div>
           <p className="text-sm text-gray-500 mt-4">

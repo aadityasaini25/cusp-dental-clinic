@@ -3,28 +3,28 @@ import Image from "next/image";
 export default function GoogleReviews() {
   const reviews = [
     {
-      name: "Amol Kenche",
-      initials: "AK",
+      name: "gaurav wahi",
+      initials: "GW",
       date: "2 months ago",
-      review: "Dr. Shubham is an incredibly skilled surgeon. I was very nervous about getting dental implants, but he explained everything clearly and the procedure was completely painless. The clinic itself is spotless and highly advanced."
+      review: "I recently visited Dr.Mohit  for dental treatment, and I couldn’t be more pleased with the experience. From the moment I walked into the clinic, the staff was warm, welcoming, and professional. Dr. Pritam herself is extremely knowledgeable and gentle, which immediately put me at ease."
     },
     {
-      name: "Shruti Jagtap",
-      initials: "SJ",
+      name: "Urvashi Sood",
+      initials: "US",
       date: "4 months ago",
-      review: "I had a complex wisdom tooth extraction done here. Dr. Salunkhe and his team made the process so smooth and comfortable. Recovery was much faster than I expected. Highly recommend Face Max for any surgical procedures."
+      review: "Highly recommend! I have LOTS of anxiety about going to the dentist. After this visit, I have become an advocate. Dr. Mohit was amazing. He made me feel comfortable and planned the treatment well. The end result came out really nice and exactly what was shown to me in the mock ups. The clinic maintains hygiene which was my main consideration while choosing a clinic and this clinic met my expectations well. Thanks Dr Mohit for treating me!"
     },
     {
-      name: "Dr. Suyog Shendage",
-      initials: "SS",
+      name: "Sharad Bhoyar",
+      initials: "SB",
       date: "6 months ago",
-      review: "I had a dental emergency and Dr. Shubham was a lifesaver. He was calm, professional, and very precise. The pain relief was immediate, and the follow-up care was excellent. Truly grateful to the whole team."
+      review: "Friendly doctor.Almost painless Value for money,  one doesn't feel that we are being fleeced.Good ambience."
     },
     {
-      name: "Amit E.",
-      initials: "AE",
+      name: "Nisha Gandotra",
+      initials: "NG",
       date: "8 months ago",
-      review: "Top-notch facility. The digital workflow they use for implants is fascinating, and the results are fantastic. Dr. Salunkhe is thorough, professional, and clearly a master at what he does."
+      review: "Had an outstanding experience at Cusp with Dr. Mohit for my tooth implant. The clinic is spotless, well-organized, and runs perfectly on time. Dr. Mohit’s expertise and attention to comfort made the entire process seamless. Exceptional professionalism and care—highly recommend!"
     }
   ];
 

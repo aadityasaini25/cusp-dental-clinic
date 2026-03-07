@@ -6,17 +6,17 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
   return (
-    <section className="relative pt-12 pb-20 md:pt-24 md:pb-28 px-4 md:px-12 lg:px-16 max-w-7xl mx-auto overflow-hidden">
-      <div className="text-center mb-14 md:mb-16">
-        <p className="text-[#485b51] font-semibold text-sm uppercase tracking-[0.2em] mb-4">Face Max Dental Clinic</p>
+    <section className="relative pt-4 pb-16 md:pt-8 md:pb-20 px-4 md:px-12 lg:px-16 max-w-7xl mx-auto overflow-hidden">
+      <div className="text-center mb-10 md:mb-12">
+        <p className="text-[#485b51] font-semibold text-sm uppercase tracking-[0.2em] mb-4">Cusp Dental Clinic</p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
-          Expert Oral & Maxillofacial<br className="hidden md:block" />
-          <span className="text-[#485b51]">Surgical Care</span>
+          Advanced Digital Dentistry &<br className="hidden md:block" />
+          <span className="text-[#485b51]">Invisalign Leadership</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
-          Specialist-led implant and full mouth rehabilitation centre in Pune, led by{" "}
-          <span className="font-semibold">Dr. Shubham Sunil Salunkhe (BDS, MDS – Oral &amp; Maxillofacial Surgery)</span>{" "}
-          and <span className="font-semibold">Dr. Rasika Salunkhe (BDS, MDS – Prosthodontics)</span>.
+          Premium multi-specialty dental care in Gurugram, led by{" "}
+          <span className="font-semibold">Dr. Mohit Dhiman</span>{" "}
+          (Diamond Black Invisalign Provider). Backed by specialists from AIIMS, PGI Chandigarh, and Maulana Azad.
         </p>
       </div>
 
@@ -25,7 +25,7 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
           <div className="bg-black w-full h-full flex items-center justify-center">
             <video
               className="w-full h-full object-contain"
-              src="/videos/1st vedio.mp4"
+              src="/videos/vedio1.mp4"
               autoPlay
               muted
               loop
@@ -39,10 +39,10 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
         <div className="relative md:w-[400px]">
           <div className="bg-[#0b1120] text-white p-8 md:p-10 rounded-2xl shadow-xl border border-slate-800/50">
             <h2 className="text-lg font-semibold text-[#d4af37] uppercase tracking-widest mb-6">Our Specializations</h2>
-            <ul className="space-y-5 mb-10 text-[15px] text-gray-300 leading-relaxed">
+            <ul className="space-y-4 mb-8 text-[15px] text-gray-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="text-[#d4af37] mt-0.5">—</span>
-                Oral & Maxillofacial Surgery
+                Digital Smile Design & Invisalign
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[#d4af37] mt-0.5">—</span>
@@ -50,7 +50,7 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[#d4af37] mt-0.5">—</span>
-                Pain-Managed Surgical Protocols
+                Pain-less Dentistry (Nitrous Sedation)
               </li>
             </ul>
             <button
@@ -71,10 +71,10 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
           Book Appointment
         </button>
         <a
-          href="tel:+918080697453"
+          href="tel:+919999751071"
           className="bg-white text-[#485b51] border-2 border-[#485b51] py-4 px-10 rounded-xl font-semibold text-base text-center hover:bg-[#f8faf9] transition-colors md:min-w-[220px]"
         >
-          Call +91 80806 97453
+          Call +91 99997 51071
         </a>
       </div>
     </section>

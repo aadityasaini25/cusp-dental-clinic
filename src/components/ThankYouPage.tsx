@@ -19,18 +19,18 @@ export default function ThankYouPage() {
           <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
             <div className="w-48 h-48 relative rounded-full overflow-hidden border-4 border-gray-200">
               <Image
-                src="/images/doctor/Dr. Shubham Sunil Salunkhe.png"
-                alt="Dr. Shubham Salunkhe"
+                src="/images/doctor/dr mohit.png"
+                alt="Dr. Mohit Dhiman"
                 fill
                 className="object-cover object-top"
               />
             </div>
             <div className="text-center md:text-left">
               <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-                Dr. Shubham Salunkhe
+                Dr. Mohit Dhiman
               </h2>
               <p className="text-[#01659e] font-medium mb-4">
-                Oral & Maxillofacial Surgeon | Implantologist
+                Diamond Black Invisalign Provider | Digital Smile Design Expert
               </p>
               <p className="text-gray-600 max-w-lg">
                 Our team will review your appointment request and contact you shortly to confirm the details.
@@ -67,7 +67,7 @@ export default function ThankYouPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+918080697453"
+              href="tel:+919999751071"
               className="inline-flex justify-center items-center px-6 py-3 bg-[#01659e] text-white font-medium rounded-lg hover:bg-[#b8904a] transition-colors gap-2"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">

@@ -43,7 +43,7 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
       router.push('/thank-you');
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Something went wrong. Please call us at +91 80806 97453 to book.');
+      alert('Something went wrong. Please call us at +91 99997 51071 to book.');
     } finally {
       setIsSubmitting(false);
     }
@@ -63,8 +63,8 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
         {/* Offer info */}
         <div className="bg-emerald-50 p-3 md:p-4 rounded-lg mb-4 border-l-4 border-[#485b51]">
           <p className="text-sm md:text-base text-gray-700 text-center">
-            <strong>Includes:</strong> Professional Consultation & Digital Scan
-            <span className="text-[#485b51] font-bold"> with Our Oral & Maxillofacial Surgeon</span>
+            <strong>Includes:</strong> Professional Consultation & Free Digital Scan
+            <span className="text-[#485b51] font-bold"> with Our Specialists</span>
           </p>
         </div>
 

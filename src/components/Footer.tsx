@@ -7,25 +7,25 @@ export default function Footer() {
         <div className="text-center mb-8">
           <div className="bg-white p-2 rounded-xl inline-block mb-4 shadow-xl">
             <Image
-              src="/images/logo.png"
-              alt="Face Max Dental Clinic"
+              src="/images/logo.jpg"
+              alt="Cusp Dental Clinic"
               width={100}
               height={25}
               className="h-auto opacity-100"
             />
           </div>
           <p className="text-gray-400 max-w-2xl mx-auto font-light leading-relaxed text-xs md:text-sm">
-            Face Max Dental Clinic: Advanced Implantology & Oral Surgery. 100% Digital Workflow for precision and aesthetics.
+            Cusp Dental Clinic: Multi-Specialty Advanced Digital Dentistry. Diamond Black Invisalign Provider in Gurugram.
           </p>
         </div>
-         <div className="grid md:grid-cols-3 gap-6 text-center md:text-left mb-8">
+        <div className="grid md:grid-cols-3 gap-6 text-center md:text-left mb-8">
           <div className="space-y-2">
             <h3 className="font-bold text-white text-base border-b border-gray-800 pb-1">Contact Us</h3>
             <div className="space-y-1 mt-2">
-              <a href="tel:+918080697453" className="block text-[#d4af37] font-bold text-lg hover:scale-105 transition-transform inline-block">+91 80806 97453</a>
-              <p className="text-gray-300 font-medium text-xs">9284999673</p>
-              <p className="text-gray-300 font-medium text-xs">Face Max Dental Clinic</p>
-              <a href="mailto:shubhamsalunkhe34@gmail.com" className="text-xs hover:text-white transition-colors block">shubhamsalunkhe34@gmail.com</a>
+              <a href="tel:+919999751071" className="block text-[#d4af37] font-bold text-lg hover:scale-105 transition-transform inline-block">+91 99997 51071</a>
+              <p className="text-gray-300 font-medium text-xs">9599508322</p>
+              <p className="text-gray-300 font-medium text-xs">Cusp Dental Clinic</p>
+              <a href="mailto:drmohit.connect@gmail.com" className="text-xs hover:text-white transition-colors block">drmohit.connect@gmail.com</a>
             </div>
           </div>
 
@@ -34,8 +34,9 @@ export default function Footer() {
             <div className="flex items-start justify-center md:justify-start gap-2 mt-2">
               <span className="text-[#d4af37] text-lg">🕒</span>
               <div className="text-gray-300 space-y-0.5 text-xs">
-                <p className="font-bold">Mon–Sun</p>
-                <p>10:00 AM – 09:00 PM</p>
+                <p className="font-bold">Tue–Sat: 10:00 AM – 8:00 PM</p>
+                <p>Sunday: 11:00 AM – 7:00 PM</p>
+                <p className="text-gray-500">Monday: Closed</p>
               </div>
             </div>
           </div>
@@ -43,7 +44,7 @@ export default function Footer() {
           <div className="space-y-2">
             <h3 className="font-bold text-white text-base border-b border-gray-800 pb-1">Our Location</h3>
             <a
-              href="https://maps.app.goo.gl/deFUbRo7JuupsDgN7"
+              href="https://maps.app.goo.gl/21Zch3ohhYgWM5LQ7"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-all group block text-xs mt-2"
@@ -51,10 +52,10 @@ export default function Footer() {
               <div className="flex items-start justify-center md:justify-start gap-2">
                 <span className="text-xl">📍</span>
                 <span className="text-gray-300 leading-relaxed group-hover:text-[#d4af37] transition-colors">
-                  Face Max Dental Clinic,<br />
-                  Bhekrai Nagar Road, Shiv Shakti Chowk,<br />
-                  Opposite Kaware Ice Cream,<br />
-                  Shiv Shakti Heights, 1st Floor, Pune
+                  Cusp Dental Clinic, SCO-55,<br />
+                  Huda SCO Market Complex,<br />
+                  Near Axis Bank, Sector-56,<br />
+                  Gurugram, Haryana
                 </span>
               </div>
             </a>
@@ -85,7 +86,7 @@ export default function Footer() {
 
           <div className="bg-gray-100 rounded-xl overflow-hidden h-[160px] shadow-inner border border-gray-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.9499546663205!2d73.95409219197526!3d18.4859259377269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2e9693c951e9f%3A0x1cb0dea2e1af8824!2sFACE%20MAX%20DENTAL%20%26%20FACE%20CLINIC!5e0!3m2!1sen!2sin!4v1771515518591!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28069.507098008497!2d77.0606663743164!3d28.428658099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19661ee54343%3A0x8b0b26d4b69f5acf!2sCusp%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1772804934884!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}

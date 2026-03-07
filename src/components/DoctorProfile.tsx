@@ -13,69 +13,38 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">Meet Your Doctors</h2>
           <div className="w-16 h-0.5 bg-[#d4af37] rounded-full mx-auto md:mx-0" />
           <p className="mt-4 text-gray-600 max-w-3xl text-sm md:text-base">
-            Combining surgical precision with prosthetic expertise under one roof — led by{" "}
-            <span className="font-semibold">Dr. Shubham Salunkhe (BDS, MDS – Oral &amp; Maxillofacial Surgery)</span>{" "}
-            and <span className="font-semibold">Dr. Rasika Salunkhe (BDS, MDS – Prosthodontics)</span>, with over 6 years of
-            focused clinical experience.
+            Combining digital workflows with unparalleled expertise — led by{" "}
+            <span className="font-semibold">Dr. Mohit Dhiman</span>, working alongside a
+            powerhouse team of specialists from AIIMS, PGI Chandigarh, and Maulana Azad.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start">
-          {/* Dr. Shubham */}
-          <div className="flex flex-col md:flex-col lg:flex-row gap-6">
+        <div className="grid grid-cols-1 justify-center items-center gap-10 lg:gap-16">
+          {/* Dr. Mohit Dhiman */}
+          <div className="flex flex-col md:flex-col lg:flex-row gap-6 max-w-4xl mx-auto">
             <div className="w-full md:w-full lg:w-1/2 flex justify-center">
               <div className="relative w-full max-w-sm aspect-[4/5] rounded-[28px] overflow-hidden shadow-2xl border-8 border-white ring-1 ring-gray-100">
                 <Image
-                  src="/images/doctor/Dr. Shubham Sunil Salunkhe.png"
-                  alt="Dr. Shubham Salunkhe"
+                  src="/images/doctor/dr mohit.png"
+                  alt="Dr. Mohit Dhiman"
                   fill
                   className="object-cover"
                 />
               </div>
             </div>
-            <div className="w-full md:w-full lg:w-1/2 text-center md:text-left">
+            <div className="w-full md:w-full lg:w-1/2 text-center md:text-left flex flex-col justify-center">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 tracking-tight">
-                Dr. Shubham Salunkhe
+                Dr. Mohit Dhiman
               </h3>
               <p className="text-[#485b51] font-semibold text-sm md:text-base uppercase tracking-[0.2em] mb-4">
-                BDS, MDS – Oral &amp; Maxillofacial Surgery
+                Diamond Black Invisalign Provider
               </p>
               <div className="text-gray-600 text-sm md:text-base leading-relaxed space-y-4">
                 <p>
-                  Specialist Oral and Maxillofacial Surgeon with over 6 years of clinical excellence. Brings extensive expertise in dental implantology, full-mouth rehabilitation, and complex surgical procedures.
+                  With over 18 years of clinical excellence, Dr. Mohit Dhiman is a recognized leader in Advanced Digital Dentistry and Digital Smile Design. He holds the prestigious Diamond Black Invisalign Provider status, being the first in North India to achieve this for the last 2 years.
                 </p>
                 <p>
-                  Dedicated to delivering safe, predictable, and lasting results through rigorous surgical precision and modern digital workflows. Patient comfort, trust, and long-term functional stability remain the highest priorities in every treatment.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Dr. Rasika */}
-          <div className="flex flex-col md:flex-col lg:flex-row gap-6">
-            <div className="w-full md:w-full lg:w-1/2 flex justify-center">
-              <div className="relative w-full max-w-sm aspect-[4/5] rounded-[28px] overflow-hidden shadow-2xl border-8 border-white ring-1 ring-gray-100">
-                <Image
-                  src="/images/doctor/Dr. Rasika Salunkhe.png"
-                  alt="Dr. Rasika Salunkhe"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div className="w-full md:w-full lg:w-1/2 text-center md:text-left">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 tracking-tight">
-                Dr. Rasika Salunkhe
-              </h3>
-              <p className="text-[#485b51] font-semibold text-sm md:text-base uppercase tracking-[0.2em] mb-4">
-                BDS, MDS – Prosthodontics
-              </p>
-              <div className="text-gray-600 text-sm md:text-base leading-relaxed space-y-4">
-                <p>
-                  Highly skilled Prosthodontist with over 6 years of experience in advanced restorative dentistry. Specializes in comprehensive smile rehabilitation, custom crowns, veneers, and implant-supported prostheses.
-                </p>
-                <p>
-                  Focuses on meticulous, evidence-based planning to achieve perfect occlusal harmony and natural aesthetics. Committed to providing premium, patient-first care using state-of-the-art materials to ensure beautiful, durable smiles that inspire confidence.
+                  Dr. Dhiman is backed by a formidable team of specialist dentists from India's most premier institutes including AIIMS, PGI Chandigarh, Maulana Azad, and Army Dental College. Together, they provide unparalleled, fully digital treatment workflows.
                 </p>
               </div>
             </div>

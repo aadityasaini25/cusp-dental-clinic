@@ -8,32 +8,32 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Face Max Dental Clinic | Best Implantologist & Oral Surgeon in Pune",
-  description: "Dr. Shubham Sunil Salunkhe (Oral & Maxillofacial Surgeon | Implantologist). Located at Bhekrai Nagar Road, Pune. 100% Digital Workflow Implantology.",
-  keywords: "Dr. Shubham Sunil Salunkhe, Implantologist, Oral Surgeon, Face Max Dental Clinic, Dental Implants Pune, Wisdom Tooth Removal",
-  authors: [{ name: "Dr. Shubham Sunil Salunkhe" }],
-  creator: "Face Max Dental Clinic",
-  publisher: "Face Max Dental Clinic",
+  title: "Cusp Dental Clinic | Multi-Specialty Advanced Digital Dentistry in Gurugram",
+  description: "Dr. Mohit Dhiman - Diamond Black Invisalign Provider. Located at Sector-56, Gurugram. Fully Digital Treatment Workflow.",
+  keywords: "Dr. Mohit Dhiman, Cusp Dental Clinic, Invisalign Provider Gurugram, Digital Smile Design, Advanced Digital Dentistry",
+  authors: [{ name: "Dr. Mohit Dhiman" }],
+  creator: "Cusp Dental Clinic",
+  publisher: "Cusp Dental Clinic",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://face-max-clinic.vercel.app'),
+  metadataBase: new URL('https://cuspdentalclinic.in'), // Placeholder URL, assumed for Cusp
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Face Max Dental Clinic | Expert Implant & Surgical Care",
-    description: "Dr. Shubham Sunil Salunkhe - 7+ Years Experience. Bhekrai Nagar Road, Pune.",
-    url: 'https://face-max-clinic.vercel.app/',
-    siteName: "Face Max Dental Clinic",
+    title: "Cusp Dental Clinic | Premium Dental Care in Gurugram",
+    description: "Dr. Mohit Dhiman - 18+ Years Experience. Sector-56, Gurugram.",
+    url: 'https://cuspdentalclinic.in/',
+    siteName: "Cusp Dental Clinic",
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: "Face Max Dental Clinic",
+        alt: "Cusp Dental Clinic",
       },
     ],
     locale: 'en_IN',
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Face Max Dental Clinic",
-    description: "Expert Implant & Surgical Care in Pune",
+    title: "Cusp Dental Clinic",
+    description: "Premium Dental Care in Gurugram",
     images: ['/og-image.jpg'],
   },
   robots: {

@@ -6,11 +6,10 @@ interface ClinicPhotosProps {
 
 export default function ClinicPhotos({ onBookAppointment }: ClinicPhotosProps) {
   const clinicImages = [
-    { src: '/images/clinic/clinic1.jpg', alt: 'Modern Clinic Interior' },
-    { src: '/images/clinic/clinic2.jpg', alt: 'Comfortable Reception Area' },
-    { src: '/images/clinic/clinic3.jpg', alt: 'Advanced Dental Lab' },
-    // { src: '/images/clinic/clinic4.jpg', alt: 'State-of-the-art Equipment' }, // User only provided 3, keep 3 or duplicate one if 4 slots needed?
-    // kept 3 as user provided 3. The grid handles 3 items (grid-cols-1 md:grid-cols-2).
+    { src: '/images/clinic/clinic11.jpg', alt: 'Modern Clinic Interior' },
+    { src: '/images/clinic/clinic22.jpg', alt: 'Comfortable Reception Area' },
+    { src: '/images/clinic/clinic33.jpg', alt: 'Advanced Dental Lab' },
+    { src: '/images/clinic/clinic44.jpg', alt: 'State-of-the-art Equipment' },
   ];
 
   return (
@@ -19,9 +18,9 @@ export default function ClinicPhotos({ onBookAppointment }: ClinicPhotosProps) {
         <p className="text-[#485b51] font-semibold text-sm uppercase tracking-[0.2em] mb-2">Our Facility</p>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">Our Clinic</h2>
         <div className="w-16 h-0.5 bg-[#d4af37] rounded-full mb-4" />
-        <p className="text-gray-600 max-w-xl mb-12">Shiv Shakti Heights, 1st Floor — Bhekrai Nagar Road, Pune.</p>
+        <p className="text-gray-600 max-w-xl mb-12">SCO-55, Huda SCO Market Complex, Near Axis Bank, Sector-56, Gurugram, Haryana.</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16">
           {clinicImages.map((img, i) => (
             <div key={i} className="relative aspect-[4/3] rounded-[20px] overflow-hidden shadow-md group border-4 border-white">
               <Image
