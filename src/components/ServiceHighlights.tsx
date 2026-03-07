@@ -3,20 +3,21 @@ import Image from "next/image";
 export default function ServiceHighlights() {
   const serviceData = [
     {
-      title: "Invisalign & Clear Aligners",
-      image: "/images/implant/single.png",
+      title: "Advanced Clear Aligners",
+      image: "/images/implant/aligner_dark_bg.png",
       description:
-        "Discreet, comfortable, and predictable tooth alignment from a Diamond Black Provider.",
+        "Digitally planned clear aligner treatment at Cusp Dental Clinic for comfortable, precise, and nearly invisible teeth straightening.",
       benefits: [
-        "Free Scan & Digital Simulation",
-        "Virtually invisible treatment",
-        "Faster results with precise tracking",
-        "Suitable for teens and adults",
+        "Digital smile analysis & treatment planning",
+        "Virtually invisible aligners",
+        "Comfortable and removable trays",
+        "Faster and predictable results",
+        "Personalized treatment for every patient",
       ],
     },
     {
       title: "Digital Smile Design",
-      image: "/images/implant/Multiple.png",
+      image: "/images/implant/smile_design.png",
       description:
         "Complete smile makeovers designed digitally before any treatment begins.",
       benefits: [
@@ -28,7 +29,7 @@ export default function ServiceHighlights() {
     },
     {
       title: "Pain-Free Dental Implants",
-      image: "/images/implant/supported.png",
+      image: "/images/implant/implants.png",
       description:
         "Advanced surgical protocols supported by nitrous sedation for anxiety-free procedures.",
       benefits: [
@@ -40,7 +41,7 @@ export default function ServiceHighlights() {
     },
     {
       title: "Multi-Specialty Dental Care",
-      image: "/images/implant/all_in.png",
+      image: "/images/implant/multispecialty.png",
       description:
         "Comprehensive dental needs addressed safely under one roof by a team of elite specialists.",
       benefits: [
@@ -81,7 +82,8 @@ export default function ServiceHighlights() {
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-contain filter drop-shadow-xl group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className={`object-contain filter drop-shadow-xl group-hover:scale-105 transition-transform duration-700 ease-out ${service.title === "Advanced Clear Aligners" ? "mix-blend-lighten" : ""
+                    }`}
                 />
               </div>
               <h3 className="font-bold mb-3 text-lg text-white tracking-tight group-hover:text-emerald-400 transition-colors duration-300">{service.title}</h3>
