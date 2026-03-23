@@ -52,80 +52,102 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg p-6 w-full max-w-xl max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 bg-brand-black/90 backdrop-blur-md flex items-center justify-center z-[999] p-4">
+      <div className="bg-brand-black border border-white/10 rounded-[40px] p-8 w-full max-w-xl max-h-[90vh] overflow-y-auto relative shadow-[0_0_60px_rgba(0,0,0,0.6)]">
+        {/* Decorative Blur - Added pointer-events-none to fix click interference */}
+        <div className="absolute -top-20 -right-20 w-40 h-40 bg-brand-cyan/20 blur-[90px] rounded-full pointer-events-none z-0"></div>
+        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-brand-pink/10 blur-[90px] rounded-full pointer-events-none z-0"></div>
+
         {/* Header */}
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl md:text-2xl font-bold text-[#485b51]">Book Your Appointment</h2>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+        <div className="flex justify-between items-start mb-8 relative z-10">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
+            Book Your <br />
+            <span className="text-gradient-cyan-pink text-3xl md:text-4xl">Consultation</span>
+          </h2>
+          <button 
+            onClick={(e) => { 
+              e.preventDefault();
+              e.stopPropagation();
+              onClose(); 
+            }} 
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 transition-all border border-white/10 shadow-lg active:scale-95 z-50 cursor-pointer"
+            aria-label="Close"
+          >
+            <span className="text-2xl pointer-events-none">✕</span>
+          </button>
         </div>
 
         {/* Offer info */}
-        <div className="bg-emerald-50 p-3 md:p-4 rounded-lg mb-4 border-l-4 border-[#485b51]">
-          <p className="text-sm md:text-base text-gray-700 text-center">
-            <strong>Includes:</strong> Professional Consultation & Free Digital Scan
-            <span className="text-[#485b51] font-bold"> with Our Specialists</span>
+        <div className="glass-dark p-4 md:p-6 rounded-[24px] mb-6 border border-brand-cyan/20">
+          <p className="text-sm md:text-base text-gray-300 text-center">
+            <strong className="text-white">Includes:</strong> Professional Consultation & <span className="text-brand-cyan">Free Digital Scan</span>
+            <span className="text-white font-bold"> with Our Elite Specialists</span>
           </p>
         </div>
 
         {/* Countdown */}
-        <div className="bg-black text-white p-3 md:p-4 rounded-lg mb-4 text-center">
-          <p className="text-sm md:text-base mb-1">⏰ This offer expires in:</p>
-          <div className="text-2xl md:text-3xl font-bold">
+        <div className="bg-gradient-to-r from-brand-cyan/10 to-brand-pink/10 border border-white/5 text-white p-6 rounded-[24px] mb-8 text-center">
+          <p className="text-xs uppercase tracking-widest text-gray-400 mb-2">⏱️ Priority Slot expires in</p>
+          <div className="text-3xl md:text-4xl font-black text-brand-cyan">
             {minutes.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}
           </div>
-          <p className="text-xs md:text-sm mt-1">Book within 20 minutes</p>
+          <p className="text-xs text-brand-pink mt-2 font-medium">Limited specialized slots available today</p>
         </div>
 
         {/* FORM */}
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium mb-1">Full Name</label>
-            <input
-              type="text"
-              name="fullName"
-              required
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg"
-            />
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-xs uppercase tracking-widest text-gray-400 font-bold mb-2 ml-1">Full Name</label>
+              <input
+                type="text"
+                name="fullName"
+                required
+                className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:border-brand-cyan/50 focus:ring-1 focus:ring-brand-cyan transition-all outline-none"
+                placeholder="Dr. John Doe"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs uppercase tracking-widest text-gray-400 font-bold mb-2 ml-1">Phone Number</label>
+              <input
+                type="tel"
+                name="phoneNumber"
+                required
+                className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:border-brand-cyan/50 focus:ring-1 focus:ring-brand-cyan transition-all outline-none"
+                placeholder="+91 00000 00000"
+              />
+            </div>
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Phone Number</label>
-            <input
-              type="tel"
-              name="phoneNumber"
-              required
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium mb-1">Email</label>
+            <label className="block text-xs uppercase tracking-widest text-gray-400 font-bold mb-2 ml-1">Email Address</label>
             <input
               type="email"
               name="email"
               required
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg"
+              className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:border-brand-cyan/50 focus:ring-1 focus:ring-brand-cyan transition-all outline-none"
+              placeholder="name@email.com"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Describe Your Dental Concern</label>
+            <label className="block text-xs uppercase tracking-widest text-gray-400 font-bold mb-2 ml-1">Your Dental Concern</label>
             <textarea
               name="dentalConcern"
               required
               rows={2}
-              placeholder="Briefly describe your dental issue"
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg"
+              placeholder="e.g. I'm interested in Invisalign invisalign aligners..."
+              className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:border-brand-cyan/50 focus:ring-1 focus:ring-brand-cyan transition-all outline-none resize-none"
             ></textarea>
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-[#485b51] text-white py-3 md:py-4 rounded-lg font-bold text-lg hover:opacity-90 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-full bg-gradient-to-r from-brand-cyan to-brand-pink text-white py-5 rounded-2xl font-black text-xl hover:shadow-[0_10px_40px_rgba(0,215,215,0.4)] transition-all disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest border border-white/10"
           >
-            {isSubmitting ? 'Booking…' : 'Book Appointment'}
+            {isSubmitting ? 'Confirming...' : 'Book Appointment'}
           </button>
         </form>
 

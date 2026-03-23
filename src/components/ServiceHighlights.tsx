@@ -8,11 +8,11 @@ export default function ServiceHighlights() {
       description:
         "Digitally planned clear aligner treatment at Cusp Dental Clinic for comfortable, precise, and nearly invisible teeth straightening.",
       benefits: [
-        "Digital smile analysis & treatment planning",
-        "Virtually invisible aligners",
-        "Comfortable and removable trays",
+        "Free 3D Scan & Simulation",
+        "Diamond Black Invisalign Provider",
+        "Digital smile analysis & planning",
+        "Virtually invisible & comfortable",
         "Faster and predictable results",
-        "Personalized treatment for every patient",
       ],
     },
     {
@@ -28,72 +28,86 @@ export default function ServiceHighlights() {
       ],
     },
     {
-      title: "Pain-Free Dental Implants",
-      image: "/images/implant/implants.png",
+      title: "Invisalign Teen & First",
+      image: "/images/implant/teen_aligner_new.png",
       description:
-        "Advanced surgical protocols supported by nitrous sedation for anxiety-free procedures.",
+        "Custom-made clear aligners designed specifically for growing smiles, combining advanced technology with teen-friendly features.",
       benefits: [
-        "Nitrous Oxide (Laughing Gas) sedation",
-        "Single & multiple implants",
-        "Full-mouth rehabilitation",
-        "Precision guided surgery",
+        "SmartTrack material for comfort",
+        "Compliance indicators built-in",
+        "No dietary restrictions",
+        "Fewer emergency clinic visits",
+        "Confidence to smile freely",
       ],
     },
     {
-      title: "Multi-Specialty Dental Care",
-      image: "/images/implant/multispecialty.png",
+      title: "Elite Multi-Specialty Care",
+      image: "/images/implant/elite_aligner_new.png",
       description:
-        "Comprehensive dental needs addressed safely under one roof by a team of elite specialists.",
+        "Comprehensive dental needs addressed safely under one roof by a powerhouse team of elite specialists from AIIMS & PGI.",
       benefits: [
-        "AIIMS/PGI specialist consultations",
-        "Root canals & general dentistry",
-        "Pediatric dentistry",
+        "18+ Years of Clinical Excellence",
+        "AIIMS/PGI specialist consultants",
+        "No-Cost EMI Options Available",
+        "Root canals & pediatric dentistry",
         "Periodontal (gum) therapy",
       ],
     },
   ];
 
   return (
-    <section className="relative bg-[#0b1120] text-white py-16 md:py-20 px-4 md:px-8 lg:px-12 overflow-hidden">
-      {/* Subtle background glow effect for premium feel */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-emerald-900/20 blur-[100px] rounded-full pointer-events-none"></div>
+    <section className="relative bg-brand-black text-white py-24 px-4 md:px-8 lg:px-12 overflow-hidden">
+      {/* Background Graphic */}
+      <div className="absolute inset-0 z-0 opacity-10">
+        <Image
+          src="/images/graphics/services_bg.png"
+          alt="Services Background"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-brand-black/95 to-brand-black"></div>
+      </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center md:text-left mb-10 md:mb-12">
-          <p className="text-[#d4af37] font-semibold text-xs md:text-sm uppercase tracking-[0.2em] mb-2">Our Expertise</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4 leading-tight">
-            Multi-Specialty Advanced<br className="hidden md:block" /> Digital Dentistry
+        <div className="text-center md:text-left mb-16">
+          <p className="text-brand-cyan font-semibold text-xs md:text-sm uppercase tracking-[0.2em] mb-4">Our Expertise</p>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+            Next-Gen <br className="hidden md:block" />
+            <span className="text-gradient-cyan-pink">Digital Dentistry</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-[#d4af37] to-transparent rounded-full mb-4 mx-auto md:mx-0" />
-          <p className="text-gray-400 text-base md:text-lg max-w-3xl font-light leading-relaxed">
+          <p className="text-gray-400 text-lg md:text-xl max-w-3xl font-light leading-relaxed">
             Experience world-class precision with our advanced digital treatments and elite specialist care—all tailored to your comfort under one roof.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {serviceData.map((service, index) => (
             <div
               key={index}
-              className="group bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 p-5 md:p-6 rounded-2xl flex flex-col hover:-translate-y-1.5 hover:border-emerald-500/30 hover:shadow-[0_8px_30px_rgb(16,185,129,0.12)] hover:bg-slate-800/80 transition-all duration-500 ease-out"
+              className="group glass-dark border border-white/5 p-6 rounded-[32px] flex flex-col hover:-translate-y-2 hover:border-brand-cyan/30 hover:shadow-[0_20px_40px_rgba(0,215,215,0.1)] transition-all duration-500"
             >
-              <div className="relative rounded-xl mb-5 h-36 md:h-40 flex items-center justify-center overflow-hidden bg-gradient-to-br from-white/5 to-white/0 border border-white/5 p-4 group-hover:border-emerald-500/20 transition-colors duration-500">
-                <div className="absolute inset-0 bg-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative rounded-2xl mb-6 h-44 overflow-hidden bg-brand-black/40 border border-white/5 p-4 group-hover:border-brand-cyan/20 transition-all duration-500">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className={`object-contain filter drop-shadow-xl group-hover:scale-105 transition-transform duration-700 ease-out ${service.title === "Advanced Clear Aligners" ? "mix-blend-lighten" : ""
-                    }`}
+                  className="object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-700 ease-out opacity-80 group-hover:opacity-100"
                 />
               </div>
-              <h3 className="font-bold mb-3 text-lg text-white tracking-tight group-hover:text-emerald-400 transition-colors duration-300">{service.title}</h3>
-              <p className="text-[14px] text-gray-400 leading-relaxed mb-6 font-light flex-grow">{service.description}</p>
+              
+              <h3 className="font-bold mb-3 text-xl text-white tracking-tight group-hover:text-brand-cyan transition-colors duration-300">
+                {service.title}
+              </h3>
+              
+              <p className="text-[14px] text-gray-400 leading-relaxed mb-6 font-light">
+                {service.description}
+              </p>
 
-              <div className="pt-4 border-t border-slate-700/50 mt-auto">
-                <ul className="space-y-2 text-[13px] text-gray-300 font-light">
+              <div className="pt-6 border-t border-white/5 mt-auto">
+                <ul className="space-y-3 text-[13px] text-gray-300 font-light">
                   {service.benefits.map((b, i) => (
                     <li key={i} className="flex items-start gap-2.5">
-                      <span className="text-[#d4af37] mt-0.5 shrink-0 text-[10px]">✦</span>
+                      <span className="text-brand-pink mt-1 shrink-0">✦</span>
                       <span className="leading-snug">{b}</span>
                     </li>
                   ))}

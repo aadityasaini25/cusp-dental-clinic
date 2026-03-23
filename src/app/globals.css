@@ -4,15 +4,16 @@
 
 @layer base {
   :root {
-    --brand-teal: #485b51;
-    --brand-gold: #d4af37;
-    --brand-blue: #0056b3;
+    --brand-cyan: #00d7d7;
+    --brand-pink: #ff84c3;
+    --brand-teal: #0d9488; /* Slightly adjusted for better contrast */
+    --brand-dark: #1e293b;
+    --brand-black: #181a20;
     --bg-medical-light: #f8fafc;
-    --bg-lavender: #f6f2fb;
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-bg: rgba(255, 255, 255, 0.85);
-    --shadow-premium: 0 20px 50px -12px rgba(91, 33, 110, 0.08);
-    --shadow-premium-hover: 0 30px 60px -12px rgba(91, 33, 110, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --shadow-premium: 0 25px 50px -12px rgba(0, 215, 215, 0.1);
+    --shadow-premium-hover: 0 35px 60px -12px rgba(255, 132, 195, 0.2);
   }
 
   html {
@@ -22,42 +23,45 @@
   }
 
   body {
+    background-color: var(--brand-black);
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: #1e293b;
-    /* Softer black */
-    background-color: var(--bg-medical-light);
+    color: #ffffff;
   }
 }
 
 @layer utilities {
   .glass {
     background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--glass-border);
   }
 
-  .glass-card {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: var(--shadow-premium);
+  .glass-dark {
+    background: rgba(15, 15, 20, 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   }
 
-  .text-shadow-sm {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  }
-
-  .text-gradient-gold {
-    background: linear-gradient(135deg, #485b51 0%, #485b51 50%, #3a4b41 100%);
+  .text-gradient-cyan-pink {
+    background: linear-gradient(135deg, var(--brand-cyan) 0%, var(--brand-pink) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .bg-lavender {
-    background-color: var(--bg-lavender);
+  .bg-mesh-gradient {
+    background-color: var(--brand-dark);
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(0, 215, 215, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(255, 132, 195, 0.15) 0px, transparent 50%);
+  }
+
+  .bg-brand-black {
+    background-color: var(--brand-black);
   }
 }
 

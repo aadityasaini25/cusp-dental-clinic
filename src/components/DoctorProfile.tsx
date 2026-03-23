@@ -6,15 +6,20 @@ interface DoctorProfileProps {
 
 export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps) {
   return (
-    <section className="relative bg-white py-20 md:py-32 overflow-hidden">
+    <section className="relative bg-brand-black py-24 md:py-32 overflow-hidden" id="doctors">
+      {/* Background Glows */}
+      <div className="absolute top-0 left-0 w-1/3 h-full bg-brand-cyan/5 blur-[120px] rounded-full -ml-20"></div>
+      <div className="absolute bottom-0 right-0 w-1/3 h-full bg-brand-pink/5 blur-[120px] rounded-full -mr-20"></div>
+
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="text-center md:text-left mb-12">
-          <p className="text-[#485b51] font-semibold text-sm uppercase tracking-[0.2em] mb-2">Our Specialists</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">Meet Your Doctors</h2>
-          <div className="w-16 h-0.5 bg-[#d4af37] rounded-full mx-auto md:mx-0" />
-          <p className="mt-4 text-gray-600 max-w-3xl text-sm md:text-base">
+        <div className="text-center md:text-left mb-16 relative z-10">
+          <p className="text-brand-cyan font-bold text-sm uppercase tracking-[0.2em] mb-4">Our Specialists</p>
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-8">
+            Meet Your <span className="text-gradient-cyan-pink">Doctors</span>
+          </h2>
+          <p className="mt-4 text-gray-400 max-w-3xl text-lg font-light leading-relaxed">
             Combining digital workflows with unparalleled expertise — led by{" "}
-            <span className="font-semibold">Dr. Mohit Dhiman</span>, working alongside a
+            <span className="font-semibold text-white">Dr. Mohit Dhiman</span>, working alongside a
             powerhouse team of specialists from AIIMS, PGI Chandigarh, and Maulana Azad.
           </p>
         </div>
@@ -33,15 +38,15 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
               </div>
             </div>
             <div className="w-full md:w-full lg:w-1/2 text-center md:text-left flex flex-col justify-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 tracking-tight">
+              <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-2 tracking-tight">
                 Dr. Mohit Dhiman
               </h3>
-              <p className="text-[#485b51] font-semibold text-sm md:text-base uppercase tracking-[0.2em] mb-4">
+              <p className="text-brand-cyan font-bold text-sm md:text-base uppercase tracking-[0.2em] mb-6">
                 Diamond Black Invisalign Provider
               </p>
-              <div className="text-gray-600 text-sm md:text-base leading-relaxed space-y-4">
+              <div className="text-gray-400 text-lg md:text-xl leading-relaxed space-y-6 font-light">
                 <p>
-                  With over 18 years of clinical excellence, Dr. Mohit Dhiman is a recognized leader in Advanced Digital Dentistry and Digital Smile Design. He holds the prestigious Diamond Black Invisalign Provider status, being the first in North India to achieve this for the last 2 years.
+                  With over 18 years of clinical excellence, Dr. Mohit Dhiman is a recognized leader in Advanced Digital Dentistry and Digital Smile Design. He holds the prestigious <span className="text-white font-bold">Diamond Black Invisalign Provider</span> status, being the first in North India to achieve this for the last 2 years.
                 </p>
                 <p>
                   Dr. Dhiman is backed by a formidable team of specialist dentists from India's most premier institutes including AIIMS, PGI Chandigarh, Maulana Azad, and Army Dental College. Together, they provide unparalleled, fully digital treatment workflows.
@@ -54,9 +59,9 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
         <div className="mt-12 flex justify-center">
           <button
             onClick={onBookAppointment}
-            className="bg-[#485b51] text-white px-10 py-4 rounded-xl font-semibold text-base hover:bg-[#3a4a42] transition-colors shadow-lg hover:shadow-xl"
+            className="bg-gradient-to-r from-brand-cyan to-brand-pink text-white px-12 py-5 rounded-full font-black text-lg hover:shadow-[0_10px_40px_rgba(0,215,215,0.4)] transition-all hover:-translate-y-1 uppercase tracking-widest border border-white/10"
           >
-            Schedule Implant Consultation
+            Schedule Consultation
           </button>
         </div>
       </div>

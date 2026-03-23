@@ -6,7 +6,7 @@ interface HeaderProps {
 
 export default function Header({ onBookAppointment }: HeaderProps) {
   return (
-    <header className="relative z-50 glass shadow-premium py-1 lg:py-1.5 px-4 transition-all duration-300">
+    <header className="relative z-50 glass-dark shadow-premium py-1 lg:py-1.5 px-4 transition-all duration-300">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-1.5 lg:gap-3">
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
           <Image
@@ -27,7 +27,7 @@ export default function Header({ onBookAppointment }: HeaderProps) {
             <div className="flex items-center gap-1 justify-center sm:justify-start text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-gray-400">
               <span>📍 Location</span>
             </div>
-            <p className="text-[11px] sm:text-xs font-medium text-gray-700 leading-tight">
+            <p className="text-[11px] sm:text-xs font-medium text-white/90 leading-tight">
               Sector-56, Gurugram
             </p>
           </a>
@@ -38,12 +38,12 @@ export default function Header({ onBookAppointment }: HeaderProps) {
             href="tel:+919999751071"
             className="hidden sm:flex flex-col items-end mr-0 sm:mr-1 text-right"
           >
-            <span className="text-[9px] uppercase tracking-widest font-bold text-gray-400">Call Us</span>
-            <span className="text-[#485b51] font-bold text-xs sm:text-sm leading-tight">+91 99997 51071</span>
+            <span className="text-[9px] uppercase tracking-widest font-bold text-gray-400">Call Specialist</span>
+            <span className="text-brand-cyan font-bold text-xs sm:text-sm leading-tight">+91 99997 51071</span>
           </a>
           <button
             onClick={onBookAppointment}
-            className="btn-primary shadow-emerald-500/20 py-1.5 px-4 text-xs font-medium"
+            className="px-6 py-2 bg-gradient-to-r from-brand-cyan to-brand-pink text-white rounded-full text-xs font-bold hover:shadow-[0_0_15px_rgba(0,215,215,0.3)] transition-all"
           >
             Book Appointment
           </button>

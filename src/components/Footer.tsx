@@ -65,7 +65,7 @@ export default function Footer() {
         {/* Payment Methods and Maps Embed */}
         <div className="grid md:grid-cols-2 gap-4 items-start">
           <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-            <h3 className="font-bold text-gray-900 mb-2 text-sm border-b border-gray-100 pb-1">Payment &amp; Billing</h3>
+            <h3 className="font-bold text-white mb-2 text-sm border-b border-white/10 pb-1">Payment & Billing</h3>
             <ul className="grid grid-cols-2 gap-2 mt-2">
               {[
                 { name: "Credit & Debit Card", icon: "💳" },
@@ -93,14 +93,14 @@ export default function Footer() {
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Face Max Dental Clinic - Pune"
+              title="Cusp Dental Clinic - Gurugram"
               className="grayscale hover:grayscale-0 transition-all duration-700"
             ></iframe>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-4 text-center text-gray-500 text-[10px] sm:text-xs">
-          <p>&copy; {new Date().getFullYear()} Face Max Dental Clinic. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Cusp Dental Clinic. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -101,13 +101,8 @@ export default function Home() {
 
   return (
     <div>
-      {/* Subtle background – one soft shape, no bouncy/ping */}
-      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-[480px] h-[480px] rounded-full bg-[#485b51]/[0.03]" aria-hidden="true" />
-      </div>
-
       {/* Main Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 bg-brand-black">
         <Header onBookAppointment={openPopup} />
         <HeroSection onBookAppointment={openPopup} />
         <WhyChooseUs />
