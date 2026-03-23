@@ -53,7 +53,7 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
 
   return (
     <div className="fixed inset-0 bg-brand-black/90 backdrop-blur-md flex items-center justify-center z-[999] p-4">
-      <div className="bg-brand-black border border-white/10 rounded-[40px] p-8 w-full max-w-xl max-h-[90vh] overflow-y-auto relative shadow-[0_0_60px_rgba(0,0,0,0.6)]">
+      <div className="bg-brand-black border border-white/10 rounded-[40px] p-8 w-full max-w-xl max-h-[90vh] overflow-y-auto overflow-x-hidden relative shadow-[0_0_60px_rgba(0,0,0,0.6)]">
         {/* Decorative Blur - Added pointer-events-none to fix click interference */}
         <div className="absolute -top-20 -right-20 w-40 h-40 bg-brand-cyan/20 blur-[90px] rounded-full pointer-events-none z-0"></div>
         <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-brand-pink/10 blur-[90px] rounded-full pointer-events-none z-0"></div>

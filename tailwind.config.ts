@@ -13,9 +13,9 @@ export default {
         lightCream: "rgb(255, 247, 229)",
         yellow: "rgb(205, 159, 82)",
         brandBlue: "#1a897f",
-        "brand-cyan": "#00D7D7",
-        "brand-pink": "#FF84C3",
-        "brand-black": "#0f1115", // Lighter than #050505
+        "brand-cyan": "#38bdf8",
+        "brand-pink": "#2dd4bf",
+        "brand-black": "#0f172a", // Slate 900
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],

@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    --brand-cyan: #00e5e5; /* Slightly brighter cyan */
-    --brand-pink: #ff84c3;
-    --brand-teal: #0d9488; /* Slightly adjusted for better contrast */
-    --brand-dark: #2a3441; /* Lighter dark slate */
-    --brand-black: #21242c; /* Lighter dark background */
+    --brand-cyan: #38bdf8; /* Medical Sky Blue */
+    --brand-pink: #2dd4bf; /* Medical Teal/Mint */
+    --brand-teal: #0f766e; /* Deep Teal */
+    --brand-dark: #1e293b; /* Slate 800 */
+    --brand-black: #0f172a; /* Slate 900 */
     --bg-medical-light: #f8fafc;
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.05);
     --glass-bg: rgba(255, 255, 255, 0.7);
     --shadow-premium: 0 25px 50px -12px rgba(0, 215, 215, 0.1);
     --shadow-premium-hover: 0 35px 60px -12px rgba(255, 132, 195, 0.2);
