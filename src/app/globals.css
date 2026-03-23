@@ -4,11 +4,11 @@
 
 @layer base {
   :root {
-    --brand-cyan: #00d7d7;
+    --brand-cyan: #00e5e5; /* Slightly brighter cyan */
     --brand-pink: #ff84c3;
     --brand-teal: #0d9488; /* Slightly adjusted for better contrast */
-    --brand-dark: #1e293b;
-    --brand-black: #181a20;
+    --brand-dark: #2a3441; /* Lighter dark slate */
+    --brand-black: #21242c; /* Lighter dark background */
     --bg-medical-light: #f8fafc;
     --glass-border: rgba(255, 255, 255, 0.1);
     --glass-bg: rgba(255, 255, 255, 0.7);
@@ -39,11 +39,11 @@
   }
 
   .glass-dark {
-    background: rgba(15, 15, 20, 0.75);
+    background: rgba(30, 32, 40, 0.8); /* Lighter translucent background */
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.12); /* Slightly more visible border */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   }
 
   .text-gradient-cyan-pink {
