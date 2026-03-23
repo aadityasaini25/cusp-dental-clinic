@@ -24,13 +24,13 @@ export default function Header({ onBookAppointment }: HeaderProps) {
             href="https://www.google.com/maps/search/?api=1&query=Cusp+Dental+Clinic+Sector-56+Gurugram"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:flex flex-col items-start hover:opacity-80 transition-opacity"
+            className="flex flex-col items-start hover:opacity-80 transition-opacity ml-1 sm:ml-0"
           >
-            <div className="flex items-center gap-1 text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-gray-400">
-              <span className="text-brand-cyan">📍</span> Location
+            <div className="flex items-center gap-0.5 sm:gap-1 text-[8px] sm:text-[10px] uppercase tracking-widest font-bold text-gray-400 leading-none mb-0.5">
+              <span className="text-brand-cyan text-[10px]">📍</span> Location
             </div>
-            <p className="text-[11px] sm:text-xs font-medium text-white/90 leading-tight">
-              Sector-56, Gurugram
+            <p className="text-[10px] sm:text-xs font-medium text-white/90 leading-tight">
+              Sector-56 <br className="sm:hidden" /> Gurugram
             </p>
           </a>
         </div>

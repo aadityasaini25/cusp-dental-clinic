@@ -44,42 +44,42 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
               Advanced technology meets elite multi-specialty expertise from AIIMS & PGI.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <button
                 onClick={onBookAppointment}
-                className="px-8 py-4 bg-gradient-to-r from-brand-cyan to-brand-pink text-white rounded-full font-extrabold text-lg hover:shadow-[0_10px_30px_rgba(0,215,215,0.4)] transition-all hover:-translate-y-1 border border-white/10"
+                className="px-6 py-3.5 sm:px-8 sm:py-4 bg-gradient-to-r from-brand-cyan to-brand-pink text-white rounded-full font-extrabold text-base sm:text-lg hover:shadow-[0_10px_30px_rgba(56,189,248,0.4)] transition-all hover:-translate-y-1 border border-white/10"
               >
                 Book Appointment
               </button>
               <a
                 href="tel:+919999751071"
-                className="px-8 py-4 glass-dark text-white border border-white/10 rounded-full font-bold text-lg text-center hover:bg-white/5 transition-all"
+                className="px-6 py-3.5 sm:px-8 sm:py-4 glass-dark text-white border border-white/10 rounded-full font-bold text-base sm:text-lg text-center hover:bg-white/5 transition-all"
               >
                 Call Specialist
               </a>
             </div>
 
-            <div className="flex items-center gap-6 pt-6 border-t border-white/10 max-w-md">
-              <div>
-                <div className="text-2xl font-bold text-white">18+</div>
-                <div className="text-gray-400 text-sm font-medium">Years Exp.</div>
+            <div className="flex items-center justify-between sm:justify-start gap-2 sm:gap-6 pt-6 border-t border-white/10 max-w-md">
+              <div className="text-center sm:text-left">
+                <div className="text-xl sm:text-2xl font-bold text-white">18+</div>
+                <div className="text-gray-400 text-xs sm:text-sm font-medium">Years Exp.</div>
               </div>
-              <div className="h-10 w-px bg-white/10"></div>
-              <div>
-                <div className="text-2xl font-bold text-white">15k+</div>
-                <div className="text-gray-400 text-sm font-medium">Happy Smiles</div>
+              <div className="h-8 sm:h-10 w-px bg-white/10"></div>
+              <div className="text-center sm:text-left">
+                <div className="text-xl sm:text-2xl font-bold text-white">15k+</div>
+                <div className="text-gray-400 text-xs sm:text-sm font-medium">Happy Smiles</div>
               </div>
-              <div className="h-10 w-px bg-white/10"></div>
-              <div>
-                <div className="text-2xl font-bold text-white">AIIMS</div>
-                <div className="text-gray-400 text-sm font-medium">Specialists</div>
+              <div className="h-8 sm:h-10 w-px bg-white/10"></div>
+              <div className="text-center sm:text-left">
+                <div className="text-xl sm:text-2xl font-bold text-white">AIIMS</div>
+                <div className="text-gray-400 text-xs sm:text-sm font-medium">Specialists</div>
               </div>
             </div>
           </div>
 
-          <div className="hidden lg:block relative">
-            <div className="relative z-10 rounded-[24px] overflow-hidden">
-              <div className="bg-black aspect-[9/16] md:aspect-auto md:h-[600px] flex items-center justify-center">
+          <div className="block mt-8 lg:mt-0 relative w-full max-w-sm mx-auto lg:max-w-none">
+            <div className="relative z-10 rounded-[24px] overflow-hidden shadow-2xl border border-white/10">
+              <div className="bg-brand-black aspect-[4/5] md:aspect-auto md:h-[600px] flex items-center justify-center">
                 <video
                   src="/videos/herovedio.mp4"
                   autoPlay

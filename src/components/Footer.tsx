@@ -5,13 +5,12 @@ export default function Footer() {
     <footer className="bg-gray-900 border-t border-gray-800 pt-8 pb-4 text-gray-400">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-8">
-          <div className="bg-white p-2 rounded-xl inline-block mb-4 shadow-xl">
+          <div className="relative w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full overflow-hidden border-2 border-brand-cyan/20 shadow-[0_0_20px_rgba(56,189,248,0.1)] bg-black/50 mb-6">
             <Image
               src="/images/logo.jpg"
               alt="Cusp Dental Clinic"
-              width={100}
-              height={25}
-              className="h-auto opacity-100"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
           <p className="text-gray-400 max-w-2xl mx-auto font-light leading-relaxed text-xs md:text-sm">

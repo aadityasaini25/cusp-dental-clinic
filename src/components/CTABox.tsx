@@ -17,7 +17,7 @@ export default function CTABox({ onBookAppointment }: CTABoxProps) {
         </p>
         <button
           onClick={onBookAppointment}
-          className="bg-gradient-to-r from-brand-cyan to-brand-pink text-white px-12 py-5 rounded-full font-black text-lg hover:shadow-[0_10px_40px_rgba(0,215,215,0.4)] transition-all hover:-translate-y-1 uppercase tracking-widest border border-white/10"
+          className="bg-gradient-to-r from-brand-cyan to-brand-pink text-white px-8 py-4 md:px-12 md:py-5 rounded-full font-black text-base md:text-lg hover:shadow-[0_10px_40px_rgba(56,189,248,0.4)] transition-all hover:-translate-y-1 uppercase tracking-widest border border-white/10"
         >
           Book Your Consultation
         </button>
