@@ -148,7 +148,7 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-premium-primary text-white py-5 rounded-[12px] font-bold text-xl shadow-premium hover:shadow-premium-lg hover:bg-blue-700 transition-all hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed tracking-wide"
+            className="w-full bg-premium-gradient text-white py-5 rounded-[12px] font-bold text-xl shadow-premium hover:shadow-premium-lg hover:opacity-90 transition-all hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed tracking-wide"
           >
             {isSubmitting ? 'Confirming...' : 'Book Appointment'}
           </button>

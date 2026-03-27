@@ -16,7 +16,7 @@ export default function StickyCTA({ isVisible, onBookAppointment }: StickyCtaPro
     return (
       <button
         onClick={() => setIsMinimized(false)}
-        className="fixed bottom-6 left-6 z-50 bg-premium-primary text-white p-4 rounded-full shadow-premium hover:scale-110 transition-all flex items-center gap-2 animate-in fade-in slide-in-from-bottom-5 border border-white/20"
+        className="fixed bottom-6 left-6 z-50 bg-premium-gradient text-white p-4 rounded-full shadow-premium hover:scale-110 transition-all flex items-center gap-2 animate-in fade-in slide-in-from-bottom-5 border border-white/20"
         aria-label="Expand Book Appointment"
       >
         <span className="text-xl">📅</span>
@@ -42,13 +42,13 @@ export default function StickyCTA({ isVisible, onBookAppointment }: StickyCtaPro
         <div className="flex gap-4 w-full md:w-auto">
           <button
             onClick={onBookAppointment}
-            className="flex-1 md:flex-none bg-premium-primary text-white px-10 py-4 rounded-[12px] font-bold text-sm tracking-wide shadow-premium hover:shadow-xl hover:bg-blue-700 transition-all hover:scale-[1.02]"
+            className="flex-1 md:flex-none bg-premium-gradient text-white px-10 py-4 rounded-[12px] font-bold text-sm tracking-wide shadow-premium hover:shadow-xl hover:opacity-90 transition-all hover:scale-[1.02]"
           >
             Confirm Appointment
           </button>
           <a
             href="tel:+919599508322"
-            className="hidden sm:flex items-center justify-center bg-premium-section text-premium-primary border border-premium-border px-5 rounded-[12px] font-bold text-lg hover:bg-premium-border transition-colors shadow-sm"
+            className="hidden sm:flex items-center justify-center bg-premium-section text-premium-primary border border-premium-border px-5 rounded-[12px] font-bold text-lg hover:opacity-80 transition-all shadow-sm"
           >
             📞
           </a>

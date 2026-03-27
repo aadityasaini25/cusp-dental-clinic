@@ -27,7 +27,7 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-premium-text leading-[1.05] tracking-tight">
               Crafting Your <br />
-              <span className="text-premium-primary">Perfect Smile</span> <br />
+              <span className="text-gradient-primary">Perfect Smile</span> <br />
               with Precision.
             </h1>
 
@@ -35,14 +35,14 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
               Experience the future of dentistry with{" "}
               <span className="text-premium-text font-bold underline decoration-premium-primary/30 underline-offset-8">Dr. Mohit Dhiman</span>, 
               expert in{" "}
-              <span className="text-premium-primary font-black">Digital Smile Design & Implants</span>. 
+              <span className="text-gradient-primary font-black">Digital Smile Design & Implants</span>. 
               Led by elite multi-specialty expertise from AIIMS & PGI Chandigarh.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button
                 onClick={onBookAppointment}
-                className="px-10 py-5 bg-premium-primary text-white rounded-[12px] font-bold text-lg shadow-premium hover:shadow-premium-lg hover:bg-blue-700 transition-all hover:scale-105"
+                className="px-10 py-5 bg-premium-gradient text-white rounded-[12px] font-bold text-lg shadow-premium hover:shadow-premium-lg hover:opacity-90 transition-all hover:scale-105"
               >
                 Book Appointment
               </button>

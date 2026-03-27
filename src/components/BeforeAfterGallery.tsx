@@ -69,7 +69,7 @@ export default function BeforeAfterGallery({ onBookAppointment }: BeforeAfterGal
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <button
               onClick={onBookAppointment}
-              className="px-10 py-5 bg-premium-primary text-white rounded-[12px] font-bold text-xl shadow-premium hover:shadow-premium-lg hover:bg-blue-700 transition-all hover:scale-[1.03] tracking-wide"
+              className="px-10 py-5 bg-premium-gradient text-white rounded-[12px] font-bold text-xl shadow-premium hover:shadow-premium-lg hover:opacity-90 transition-all hover:scale-[1.03] tracking-wide"
             >
               Book Consultation
             </button>

@@ -11,16 +11,19 @@ export default {
       colors: {
         premium: {
           bg: "#F9FBFD",
-          section: "#EEF2F7",
-          primary: "#2563EB", // Exact Brand Blue from Logo
-          accent: "#C8A96A", // Soft Champagne Gold for premium contrast
-          text: "#0B132B",
-          subtext: "#6B7280",
-          border: "#E5E7EB",
+          section: "#F1F5F9",
+          primary: "#14D3D3", // Vibrant Cyan from Logo (Right side)
+          accent: "#F472B6", // Soft Pink from Logo (Left side)
+          text: "#111827", // Neutral Slate-900 (Replacing Navy Blue)
+          subtext: "#4B5563", // Gray-600
+          border: "#E2E8F0", // Slate-200
         },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+      },
+      backgroundImage: {
+        'premium-gradient': 'linear-gradient(to right, #F472B6, #14D3D3)',
       },
     },
   },

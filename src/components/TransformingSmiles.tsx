@@ -10,7 +10,7 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
       <h2 className="text-xl md:text-3xl font-bold text-center mb-2">
         <u>Transforming Smiles</u>
       </h2>
-      <p className="text-center text-orange-500 font-bold mb-6 md:text-lg">
+      <p className="text-center text-premium-accent font-bold mb-6 md:text-lg">
         Witness the before and after the magic of our Painless Dental Implants!
       </p>
 
@@ -66,7 +66,7 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
               Your browser does not support the video tag.
             </video>
           </div>
-          <button onClick={onBookAppointment} className="bg-[#485b51] text-white py-3 px-6 rounded-lg font-bold w-full mb-2">
+          <button onClick={onBookAppointment} className="bg-premium-gradient text-white py-3 px-6 rounded-lg font-bold w-full mb-2 hover:opacity-90 transition-all">
             Request a Call back ➤
           </button>
           <small className="block text-center text-gray-600">

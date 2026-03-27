@@ -10,7 +10,7 @@ export default function MobileMenu() {
     <div className="md:hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 rounded-md text-gray-600 hover:text-blue-600"
+        className="p-2 rounded-md text-gray-600 hover:text-premium-primary"
       >
         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </button>
@@ -48,7 +48,7 @@ export default function MobileMenu() {
             </a>
             <a
               href="tel:+919599508322"
-              className="block bg-[#485b51] text-white px-4 py-2 rounded-lg hover:opacity-90 transition text-center mt-4"
+              className="block bg-premium-primary text-white px-4 py-2 rounded-lg hover:opacity-90 transition text-center mt-4"
               onClick={() => setIsOpen(false)}
             >
               Book Appointment

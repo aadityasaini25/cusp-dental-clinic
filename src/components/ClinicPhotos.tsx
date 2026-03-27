@@ -41,7 +41,7 @@ export default function ClinicPhotos({ onBookAppointment }: ClinicPhotosProps) {
         <div className="text-center">
           <button
             onClick={onBookAppointment}
-            className="px-10 py-5 bg-premium-primary text-white rounded-[12px] font-bold text-xl shadow-premium hover:shadow-xl hover:bg-blue-700 transition-all hover:scale-[1.03]"
+            className="px-10 py-5 bg-premium-gradient text-white rounded-[12px] font-bold text-xl shadow-premium hover:shadow-xl hover:opacity-90 transition-all hover:scale-[1.03]"
           >
             Visit Our Clinic
           </button>

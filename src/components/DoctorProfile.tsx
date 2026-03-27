@@ -8,7 +8,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
   return (
     <section className="relative bg-premium-bg py-24 md:py-32 overflow-hidden" id="doctors">
       {/* Background Graphic Accents */}
-      <div className="absolute top-0 left-0 w-1/3 h-full bg-blue-50/50 blur-[120px] rounded-full -ml-20"></div>
+      <div className="absolute top-0 left-0 w-1/3 h-full bg-premium-primary/5 blur-[120px] rounded-full -ml-20"></div>
       <div className="absolute bottom-0 right-0 w-1/3 h-full bg-premium-section/50 blur-[120px] rounded-full -mr-20"></div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -89,7 +89,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
         <div className="mt-16 flex justify-center">
           <button
             onClick={onBookAppointment}
-            className="px-10 py-5 bg-premium-primary text-white rounded-[12px] font-bold text-xl shadow-premium hover:shadow-premium-lg hover:bg-blue-700 transition-all hover:scale-[1.03] tracking-wide"
+            className="px-10 py-5 bg-premium-gradient text-white rounded-[12px] font-bold text-xl shadow-premium hover:shadow-premium-lg hover:opacity-90 transition-all hover:scale-[1.03] tracking-wide"
           >
             Schedule Consultation
           </button>
