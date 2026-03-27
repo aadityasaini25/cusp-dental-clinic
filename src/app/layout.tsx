@@ -68,11 +68,14 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#485b51" />
+        <meta name="theme-color" content="#2563EB" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={`${inter.variable} font-sans antialiased overflow-x-hidden w-full`}>
+      <body 
+        className={`${inter.variable} font-sans antialiased overflow-x-hidden w-full`}
+        suppressHydrationWarning={true}
+      >
         {children}
       </body>
     </html>

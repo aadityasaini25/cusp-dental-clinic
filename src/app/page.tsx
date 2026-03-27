@@ -102,7 +102,7 @@ export default function Home() {
   return (
     <div>
       {/* Main Content */}
-      <div className="relative z-10 bg-brand-black">
+      <div className="relative z-10 bg-premium-bg">
         <Header onBookAppointment={openPopup} />
         <HeroSection onBookAppointment={openPopup} />
         <WhyChooseUs />

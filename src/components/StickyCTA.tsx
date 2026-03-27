@@ -16,39 +16,39 @@ export default function StickyCTA({ isVisible, onBookAppointment }: StickyCtaPro
     return (
       <button
         onClick={() => setIsMinimized(false)}
-        className="fixed bottom-6 left-6 z-50 bg-[#485b51] text-white p-4 rounded-full shadow-2xl hover:scale-105 transition-all flex items-center gap-2 animate-in fade-in slide-in-from-bottom-5"
+        className="fixed bottom-6 left-6 z-50 bg-premium-primary text-white p-4 rounded-full shadow-premium hover:scale-110 transition-all flex items-center gap-2 animate-in fade-in slide-in-from-bottom-5 border border-white/20"
         aria-label="Expand Book Appointment"
       >
-        <span>📅</span>
-        <span className="hidden sm:inline font-bold text-sm tracking-widest uppercase">Book View</span>
+        <span className="text-xl">📅</span>
+        <span className="hidden sm:inline font-bold text-xs tracking-widest uppercase pl-1">Book Today</span>
       </button>
     );
   }
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-4xl glass-dark shadow-2xl rounded-[32px] p-6 z-50 animate-in fade-in slide-in-from-bottom-5 duration-700 border border-white/10">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-4xl bg-white/90 backdrop-blur-xl shadow-premium-lg rounded-[20px] p-5 md:p-6 z-50 animate-in fade-in slide-in-from-bottom-5 duration-700 border border-premium-border">
       <button
         onClick={() => setIsMinimized(true)}
-        className="absolute -top-3 -right-3 bg-brand-black text-gray-400 hover:text-white rounded-full w-8 h-8 shadow-xl flex items-center justify-center border border-white/10 transition-colors z-10"
+        className="absolute -top-3 -right-3 bg-white text-premium-subtext hover:text-premium-primary rounded-full w-8 h-8 shadow-premium flex items-center justify-center border border-premium-border transition-colors z-10"
         aria-label="Minimize"
       >
         ✕
       </button>
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-center md:text-left">
-          <h3 className="font-extrabold text-2xl text-white mb-1">Transform Your <span className="text-gradient-cyan-pink">Smile Today</span></h3>
-          <p className="text-gray-400 font-light">Specialist Consultation & Digital Scan</p>
+          <h3 className="font-black text-xl md:text-2xl text-premium-text mb-1 tracking-tight">Transform Your <span className="text-premium-primary">Smile Today</span></h3>
+          <p className="text-premium-subtext font-bold text-xs uppercase tracking-widest">Specialist Consultation & Digital Scan Included</p>
         </div>
         <div className="flex gap-4 w-full md:w-auto">
           <button
             onClick={onBookAppointment}
-            className="flex-1 md:flex-none bg-gradient-to-r from-brand-cyan to-brand-pink text-white px-8 py-4 rounded-full font-black text-sm tracking-widest uppercase hover:shadow-[0_10px_30px_rgba(0,215,215,0.3)] hover:-translate-y-1 transition-all"
+            className="flex-1 md:flex-none bg-premium-primary text-white px-10 py-4 rounded-[12px] font-bold text-sm tracking-wide shadow-premium hover:shadow-xl hover:bg-blue-700 transition-all hover:scale-[1.02]"
           >
-            Book Appointment
+            Confirm Appointment
           </button>
           <a
-            href="tel:+919999751071"
-            className="hidden sm:flex items-center justify-center bg-white/5 text-brand-cyan border-2 border-brand-cyan/20 px-6 py-4 rounded-full font-bold text-sm hover:bg-brand-cyan/10 transition-colors"
+            href="tel:+919599508322"
+            className="hidden sm:flex items-center justify-center bg-premium-section text-premium-primary border border-premium-border px-5 rounded-[12px] font-bold text-lg hover:bg-premium-border transition-colors shadow-sm"
           >
             📞
           </a>
@@ -56,4 +56,5 @@ export default function StickyCTA({ isVisible, onBookAppointment }: StickyCtaPro
       </div>
     </div>
   );
-} 
+}
+ 

@@ -43,7 +43,7 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
       router.push('/thank-you');
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Something went wrong. Please call us at +91 99997 51071 to book.');
+      alert('Something went wrong. Please call us at +91 95995 08322 to book.');
     } finally {
       setIsSubmitting(false);
     }
@@ -52,100 +52,103 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-brand-black/90 backdrop-blur-md flex items-center justify-center z-[999] p-4">
-      <div className="bg-brand-black border border-white/10 rounded-[40px] p-8 w-full max-w-xl max-h-[90vh] overflow-y-auto overflow-x-hidden relative shadow-[0_0_60px_rgba(0,0,0,0.6)]">
-        {/* Decorative Blur - Added pointer-events-none to fix click interference */}
-        <div className="absolute -top-20 -right-20 w-40 h-40 bg-brand-cyan/20 blur-[90px] rounded-full pointer-events-none z-0"></div>
-        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-brand-pink/10 blur-[90px] rounded-full pointer-events-none z-0"></div>
+    <div className="fixed inset-0 bg-premium-primary/10 backdrop-blur-md flex items-center justify-center z-[999] p-4 animate-in fade-in duration-300">
+      <div className="bg-white rounded-[24px] p-8 md:p-12 w-full max-w-xl max-h-[90vh] overflow-y-auto overflow-x-hidden relative shadow-premium-lg border border-premium-border">
+        {/* Decorative Graphic Accents */}
+        <div className="absolute -top-20 -right-20 w-40 h-40 bg-premium-primary/5 blur-[90px] rounded-full pointer-events-none z-0"></div>
+        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-premium-section/50 blur-[90px] rounded-full pointer-events-none z-0"></div>
 
         {/* Header */}
-        <div className="flex justify-between items-start mb-8 relative z-10">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
-            Book Your <br />
-            <span className="text-gradient-cyan-pink text-3xl md:text-4xl">Consultation</span>
-          </h2>
+        <div className="flex justify-between items-start mb-10 relative z-10">
+          <div>
+            <p className="text-premium-primary font-bold text-xs uppercase tracking-widest mb-3">Priority Booking</p>
+            <h2 className="text-3xl md:text-4xl font-black text-premium-text leading-tight tracking-tight">
+              Book Your <br />
+              <span className="text-premium-primary">Consultation</span>
+            </h2>
+          </div>
           <button 
             onClick={(e) => { 
               e.preventDefault();
               e.stopPropagation();
               onClose(); 
             }} 
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 transition-all border border-white/10 shadow-lg active:scale-95 z-50 cursor-pointer"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-premium-section text-premium-text hover:bg-premium-border transition-all border border-premium-border shadow-sm active:scale-95 z-50 cursor-pointer"
             aria-label="Close"
           >
-            <span className="text-2xl pointer-events-none">✕</span>
+            <span className="text-xl pointer-events-none">✕</span>
           </button>
         </div>
 
         {/* Offer info */}
-        <div className="glass-dark p-4 md:p-6 rounded-[24px] mb-6 border border-brand-cyan/20">
-          <p className="text-sm md:text-base text-gray-300 text-center">
-            <strong className="text-white">Includes:</strong> Professional Consultation & <span className="text-brand-cyan">Free Digital Scan</span>
-            <span className="text-white font-bold"> with Our Elite Specialists</span>
+        <div className="bg-premium-section/50 p-5 md:p-6 rounded-[16px] mb-8 border border-premium-border">
+          <p className="text-[15px] text-premium-subtext text-center font-bold">
+            <span className="text-premium-text">Includes:</span> Specialist Consultation & <span className="text-premium-primary underline decoration-premium-accent/30 decoration-2 underline-offset-4">Free Digital Scan</span>
           </p>
         </div>
 
         {/* Countdown */}
-        <div className="bg-gradient-to-r from-brand-cyan/10 to-brand-pink/10 border border-white/5 text-white p-6 rounded-[24px] mb-8 text-center">
-          <p className="text-xs uppercase tracking-widest text-gray-400 mb-2">⏱️ Priority Slot expires in</p>
-          <div className="text-3xl md:text-4xl font-black text-brand-cyan">
+        <div className="bg-white border-2 border-premium-primary/10 text-premium-text p-6 rounded-[20px] mb-10 text-center shadow-sm relative overflow-hidden group">
+          <div className="absolute top-0 left-0 w-1 h-full bg-premium-primary"></div>
+          <p className="text-[10px] uppercase tracking-widest text-premium-primary font-black mb-2">⏱️ Priority Slot Expires In</p>
+          <div className="text-4xl md:text-5xl font-black text-premium-text tabular-nums tracking-tighter">
             {minutes.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}
           </div>
-          <p className="text-xs text-brand-pink mt-2 font-medium">Limited specialized slots available today</p>
+          <p className="text-[11px] text-premium-accent mt-3 font-bold uppercase tracking-tight">Limited clinical availability remains</p>
         </div>
 
         {/* FORM */}
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-xs uppercase tracking-widest text-gray-400 font-bold mb-2 ml-1">Full Name</label>
+        <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="space-y-2">
+              <label className="block text-[11px] uppercase tracking-widest text-premium-text/60 font-black ml-1">Full Name</label>
               <input
                 type="text"
                 name="fullName"
                 required
-                className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:border-brand-cyan/50 focus:ring-1 focus:ring-brand-cyan transition-all outline-none"
-                placeholder="Dr. John Doe"
+                className="w-full bg-gray-50/50 border border-premium-border rounded-[12px] p-4 text-premium-text font-bold placeholder:text-gray-300 focus:bg-white focus:border-premium-primary/50 focus:ring-4 focus:ring-premium-primary/5 transition-all outline-none"
+                placeholder="e.g. Rahul Sharma"
               />
             </div>
 
-            <div>
-              <label className="block text-xs uppercase tracking-widest text-gray-400 font-bold mb-2 ml-1">Phone Number</label>
+            <div className="space-y-2">
+              <label className="block text-[11px] uppercase tracking-widest text-premium-text/60 font-black ml-1">Phone Number</label>
               <input
                 type="tel"
                 name="phoneNumber"
                 required
-                className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:border-brand-cyan/50 focus:ring-1 focus:ring-brand-cyan transition-all outline-none"
+                className="w-full bg-gray-50/50 border border-premium-border rounded-[12px] p-4 text-premium-text font-bold placeholder:text-gray-300 focus:bg-white focus:border-premium-primary/50 focus:ring-4 focus:ring-premium-primary/5 transition-all outline-none"
                 placeholder="+91 00000 00000"
               />
             </div>
           </div>
 
-          <div>
-            <label className="block text-xs uppercase tracking-widest text-gray-400 font-bold mb-2 ml-1">Email Address</label>
+          <div className="space-y-2">
+            <label className="block text-[11px] uppercase tracking-widest text-premium-text/60 font-black ml-1">Email Address</label>
             <input
               type="email"
               name="email"
               required
-              className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:border-brand-cyan/50 focus:ring-1 focus:ring-brand-cyan transition-all outline-none"
-              placeholder="name@email.com"
+              className="w-full bg-gray-50/50 border border-premium-border rounded-[12px] p-4 text-premium-text font-bold placeholder:text-gray-300 focus:bg-white focus:border-premium-primary/50 focus:ring-4 focus:ring-premium-primary/5 transition-all outline-none"
+              placeholder="rahul@example.com"
             />
           </div>
 
-          <div>
-            <label className="block text-xs uppercase tracking-widest text-gray-400 font-bold mb-2 ml-1">Your Dental Concern</label>
+          <div className="space-y-2">
+            <label className="block text-[11px] uppercase tracking-widest text-premium-text/60 font-black ml-1">Dental Concern</label>
             <textarea
               name="dentalConcern"
               required
               rows={2}
-              placeholder="e.g. I'm interested in Invisalign invisalign aligners..."
-              className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:border-brand-cyan/50 focus:ring-1 focus:ring-brand-cyan transition-all outline-none resize-none"
+              placeholder="Interested in Clear Aligners / Invisalign..."
+              className="w-full bg-gray-50/50 border border-premium-border rounded-[12px] p-4 text-premium-text font-bold placeholder:text-gray-300 focus:bg-white focus:border-premium-primary/50 focus:ring-4 focus:ring-premium-primary/5 transition-all outline-none resize-none"
             ></textarea>
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-gradient-to-r from-brand-cyan to-brand-pink text-white py-5 rounded-2xl font-black text-xl hover:shadow-[0_10px_40px_rgba(0,215,215,0.4)] transition-all disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest border border-white/10"
+            className="w-full bg-premium-primary text-white py-5 rounded-[12px] font-bold text-xl shadow-premium hover:shadow-premium-lg hover:bg-blue-700 transition-all hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed tracking-wide"
           >
             {isSubmitting ? 'Confirming...' : 'Book Appointment'}
           </button>

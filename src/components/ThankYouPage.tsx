@@ -67,7 +67,7 @@ export default function ThankYouPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+919999751071"
+              href="tel:+919599508322"
               className="inline-flex justify-center items-center px-6 py-3 bg-[#01659e] text-white font-medium rounded-lg hover:bg-[#b8904a] transition-colors gap-2"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">

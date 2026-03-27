@@ -56,58 +56,58 @@ export default function ServiceHighlights() {
   ];
 
   return (
-    <section className="relative bg-brand-black text-white py-24 px-4 md:px-8 lg:px-12 overflow-hidden">
+    <section className="relative bg-premium-section py-24 px-4 md:px-8 lg:px-12 overflow-hidden">
       {/* Background Graphic */}
-      <div className="absolute inset-0 z-0 opacity-10">
+      <div className="absolute inset-0 z-0 opacity-5">
         <Image
           src="/images/graphics/services_bg.png"
           alt="Services Background"
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-brand-black/95 to-brand-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-premium-section/95 to-premium-section"></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center md:text-left mb-16">
-          <p className="text-brand-cyan font-semibold text-xs md:text-sm uppercase tracking-[0.2em] mb-4">Our Expertise</p>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+          <p className="text-premium-primary font-bold text-xs md:text-sm uppercase tracking-[0.2em] mb-4">Our Expertise</p>
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-premium-text mb-6 leading-tight">
             Next-Gen <br className="hidden md:block" />
-            <span className="text-gradient-cyan-pink">Digital Dentistry</span>
+            <span className="text-premium-primary">Digital Dentistry</span>
           </h2>
-          <p className="text-gray-400 text-lg md:text-xl max-w-3xl font-light leading-relaxed">
+          <p className="text-premium-subtext text-lg md:text-xl max-w-3xl font-medium leading-relaxed">
             Experience world-class precision with our advanced digital treatments and elite specialist care—all tailored to your comfort under one roof.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {serviceData.map((service, index) => (
             <div
               key={index}
-              className="group glass-dark border border-white/5 p-6 rounded-[32px] flex flex-col hover:-translate-y-2 hover:border-brand-cyan/30 hover:shadow-[0_20px_40px_rgba(0,215,215,0.1)] transition-all duration-500"
+              className="group premium-card p-8 flex flex-col hover:shadow-premium-lg transition-all duration-500"
             >
-              <div className="relative rounded-2xl mb-6 h-44 overflow-hidden bg-brand-black/40 border border-white/5 p-4 group-hover:border-brand-cyan/20 transition-all duration-500">
+              <div className="relative rounded-2xl mb-8 h-48 overflow-hidden bg-premium-bg border border-premium-border/50 p-4 transition-all duration-500 group-hover:bg-white">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-700 ease-out opacity-80 group-hover:opacity-100"
+                  className="object-contain filter group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
               </div>
               
-              <h3 className="font-bold mb-3 text-xl text-white tracking-tight group-hover:text-brand-cyan transition-colors duration-300">
+              <h3 className="font-bold mb-4 text-2xl text-premium-text tracking-tight group-hover:text-premium-primary transition-colors duration-300">
                 {service.title}
               </h3>
               
-              <p className="text-[14px] text-gray-400 leading-relaxed mb-6 font-light">
+              <p className="text-[15px] text-premium-subtext leading-relaxed mb-8 font-medium italic">
                 {service.description}
               </p>
 
-              <div className="pt-6 border-t border-white/5 mt-auto">
-                <ul className="space-y-3 text-[13px] text-gray-300 font-light">
+              <div className="pt-8 border-t border-premium-border mt-auto">
+                <ul className="space-y-4 text-[14px] text-premium-text font-medium">
                   {service.benefits.map((b, i) => (
-                    <li key={i} className="flex items-start gap-2.5">
-                      <span className="text-brand-pink mt-1 shrink-0">✦</span>
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="text-premium-accent mt-1 shrink-0">✦</span>
                       <span className="leading-snug">{b}</span>
                     </li>
                   ))}

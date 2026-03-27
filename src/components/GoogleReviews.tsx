@@ -29,45 +29,59 @@ export default function GoogleReviews() {
   ];
 
   return (
-    <section className="py-24 md:py-32 px-4 md:px-8 lg:px-12 bg-brand-black border-t border-white/5 relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute top-0 right-0 w-1/4 h-full bg-brand-cyan/5 blur-[120px] rounded-full -mr-20"></div>
+    <section className="py-24 md:py-32 px-4 md:px-8 lg:px-12 bg-premium-bg border-t border-premium-border/50 relative overflow-hidden">
+      {/* Background Graphic Accent */}
+      <div className="absolute top-0 right-0 w-1/4 h-full bg-premium-primary/5 blur-[120px] rounded-full -mr-20 pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto">
-        <p className="text-brand-cyan font-bold text-sm uppercase tracking-[0.2em] mb-4">Testimonials</p>
-        <div className="flex flex-wrap items-center gap-6 mb-12">
-          <Image
-            src="/images/google.png"
-            alt="Google"
-            width={120}
-            height={40}
-            className="object-contain brightness-0 invert opacity-90"
-          />
-          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
-            Patient <span className="text-gradient-cyan-pink">Experiences</span>
-          </h2>
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+          <div className="text-center md:text-left">
+            <p className="text-premium-primary font-bold text-xs md:text-sm uppercase tracking-[0.2em] mb-4">Testimonials</p>
+            <h2 className="text-4xl md:text-6xl font-black tracking-tight text-premium-text">
+              Patient <br className="hidden md:block" />
+              <span className="text-premium-primary">Experiences</span>
+            </h2>
+          </div>
+          <div className="flex items-center gap-4 bg-white px-6 py-4 rounded-full shadow-premium border border-premium-border/50 self-center md:self-end">
+            <Image
+              src="/images/google.png"
+              alt="Google"
+              width={100}
+              height={32}
+              className="object-contain"
+            />
+            <div className="w-px h-6 bg-premium-border"></div>
+            <div className="flex text-yellow-400 text-lg">
+              {[...Array(5)].map((_, i) => (
+                <span key={i}>★</span>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {reviews.map((review, index) => (
-            <div key={index} className="glass-dark p-8 rounded-[32px] border border-white/10 hover:border-brand-cyan/30 transition-all duration-300 flex flex-col h-full hover:-translate-y-2 group shadow-xl">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 text-white rounded-full flex items-center justify-center font-black text-xl bg-gradient-to-br from-brand-cyan to-brand-pink shadow-lg">
+            <div key={index} className="premium-card p-10 flex flex-col h-full hover:shadow-premium-lg transition-all duration-500 group border-opacity-40">
+              <div className="flex items-start gap-4 mb-8">
+                <div className="w-14 h-14 text-white rounded-full flex items-center justify-center font-bold text-xl bg-premium-primary shadow-premium group-hover:scale-110 transition-transform duration-300">
                   {review.initials}
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl text-white leading-tight">{review.name}</h3>
-                  <p className="text-xs text-gray-400 mt-1 uppercase tracking-widest">{review.date}</p>
+                  <h3 className="font-bold text-xl text-premium-text leading-tight">{review.name}</h3>
+                  <p className="text-[10px] text-premium-subtext mt-1.5 uppercase font-bold tracking-widest">{review.date}</p>
                 </div>
               </div>
-              <div className="flex text-brand-cyan mb-6 text-lg">
+              <div className="flex text-premium-accent mb-6 text-sm">
                 {[...Array(5)].map((_, i) => (
                   <span key={i}>★</span>
                 ))}
               </div>
-              <p className="text-gray-300 leading-relaxed font-light flex-grow italic text-lg">
+              <p className="text-premium-subtext leading-relaxed font-medium flex-grow italic text-[15px]">
                 "{review.review}"
               </p>
+              <div className="mt-8 pt-6 border-t border-premium-border/50">
+                <span className="text-[10px] font-bold text-premium-primary uppercase tracking-widest">Verified Review</span>
+              </div>
             </div>
           ))}
         </div>

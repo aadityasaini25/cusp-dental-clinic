@@ -9,13 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        darkGreen: "rgb(55, 81, 82)",
-        lightCream: "rgb(255, 247, 229)",
-        yellow: "rgb(205, 159, 82)",
-        brandBlue: "#1a897f",
-        "brand-cyan": "#38bdf8",
-        "brand-pink": "#2dd4bf",
-        "brand-black": "#0f172a", // Slate 900
+        premium: {
+          bg: "#F9FBFD",
+          section: "#EEF2F7",
+          primary: "#2563EB", // Exact Brand Blue from Logo
+          accent: "#C8A96A", // Soft Champagne Gold for premium contrast
+          text: "#0B132B",
+          subtext: "#6B7280",
+          border: "#E5E7EB",
+        },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],

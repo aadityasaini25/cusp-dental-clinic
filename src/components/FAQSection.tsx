@@ -33,34 +33,38 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-24 md:py-32 px-4 md:px-8 bg-brand-black overflow-hidden relative">
+    <section className="py-24 md:py-32 px-4 md:px-8 bg-premium-bg overflow-hidden relative">
       {/* Decorative Blur */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-pink/5 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-premium-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <p className="text-brand-pink font-semibold text-xs md:text-sm uppercase tracking-[0.2em] mb-4">Patient Support</p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
-            Frequently Asked <span className="text-gradient-cyan-pink">Questions</span>
+          <p className="text-premium-primary font-bold text-xs md:text-sm uppercase tracking-[0.2em] mb-4">Patient Support</p>
+          <h2 className="text-4xl md:text-6xl font-black text-premium-text tracking-tight mb-2">
+            Frequently Asked <span className="text-premium-primary">Questions</span>
           </h2>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-6">
           {faqs.map((faq, index) => (
-            <div key={index} className="glass-dark rounded-3xl overflow-hidden border border-white/5 hover:border-brand-cyan/20 transition-all duration-300">
+            <div key={index} className="premium-card overflow-hidden border-opacity-50 hover:shadow-premium-lg">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full p-6 md:p-8 text-left font-bold hover:bg-white/5 transition-colors flex justify-between items-start gap-4"
+                className="w-full p-8 md:p-10 text-left font-bold transition-all flex justify-between items-center gap-6 group"
               >
-                <span className="flex-grow pr-4 text-lg md:text-xl text-white group-hover:text-brand-cyan transition-colors">{faq.question}</span>
-                <span className={`w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-brand-cyan transform transition-all duration-300 shrink-0 ${openFAQ === index ? 'rotate-180 bg-brand-cyan text-brand-black' : ''}`}>
+                <span className={`flex-grow pr-4 text-xl md:text-2xl tracking-tight transition-colors duration-300 ${openFAQ === index ? 'text-premium-primary' : 'text-premium-text'}`}>
+                  {faq.question}
+                </span>
+                <span className={`w-10 h-10 rounded-full border border-premium-border flex items-center justify-center text-premium-primary transform transition-all duration-300 shrink-0 ${openFAQ === index ? 'rotate-180 bg-premium-primary text-white border-premium-primary shadow-md' : 'group-hover:border-premium-primary/50'}`}>
                   ▼
                 </span>
               </button>
               {openFAQ === index && (
-                <div className="px-6 pb-8 md:px-8 md:pb-10 animate-in fade-in slide-in-from-top-2 duration-300">
-                  <div className="w-full h-px bg-white/5 mb-8"></div>
-                  <p className="text-gray-400 font-light text-lg md:text-xl leading-relaxed">{faq.answer}</p>
+                <div className="px-8 pb-10 md:px-10 md:pb-12 animate-in fade-in slide-in-from-top-4 duration-500">
+                  <div className="w-full h-px bg-premium-border mb-10"></div>
+                  <p className="text-premium-subtext font-medium text-lg md:text-xl leading-relaxed italic">
+                    {faq.answer}
+                  </p>
                 </div>
               )}
             </div>

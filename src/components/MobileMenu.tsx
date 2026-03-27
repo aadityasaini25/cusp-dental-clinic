@@ -20,34 +20,34 @@ export default function MobileMenu() {
           <nav className="px-4 py-2 space-y-2">
             <a
               href="#about"
-              className="block py-2 text-gray-600 hover:text-blue-600 font-medium"
+              className="block py-2 text-premium-subtext hover:text-premium-primary font-medium tracking-wide"
               onClick={() => setIsOpen(false)}
             >
               About
             </a>
             <a
               href="#services"
-              className="block py-2 text-gray-600 hover:text-blue-600 font-medium"
+              className="block py-2 text-premium-subtext hover:text-premium-primary font-medium tracking-wide"
               onClick={() => setIsOpen(false)}
             >
               Services
             </a>
             <a
               href="#testimonials"
-              className="block py-2 text-gray-600 hover:text-blue-600 font-medium"
+              className="block py-2 text-premium-subtext hover:text-premium-primary font-medium tracking-wide"
               onClick={() => setIsOpen(false)}
             >
               Testimonials
             </a>
             <a
               href="#contact"
-              className="block py-2 text-gray-600 hover:text-blue-600 font-medium"
+              className="block py-2 text-premium-subtext hover:text-premium-primary font-medium tracking-wide"
               onClick={() => setIsOpen(false)}
             >
               Contact
             </a>
             <a
-              href="tel:+919999751071"
+              href="tel:+919599508322"
               className="block bg-[#485b51] text-white px-4 py-2 rounded-lg hover:opacity-90 transition text-center mt-4"
               onClick={() => setIsOpen(false)}
             >
