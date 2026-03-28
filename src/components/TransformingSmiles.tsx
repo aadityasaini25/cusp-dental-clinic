@@ -25,6 +25,7 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
                       src={`/images/results/${i}before.png`}
                       alt={`Before Smile ${i}`}
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-contain rounded-lg"
                     />
                   </div>
@@ -38,6 +39,7 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
                       src={`/images/results/${i}after.png`}
                       alt={`After Smile ${i}`}
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-contain rounded-lg"
                     />
                   </div>
@@ -60,7 +62,7 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
             <video
               src="/videos/2.mp4"
               controls
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-contain bg-slate-900"
               poster="/videos/1-thumbnail.jpg"
             >
               Your browser does not support the video tag.

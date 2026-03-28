@@ -76,19 +76,21 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
             </div>
           </div>
 
-          <div className="block mt-12 lg:mt-0 relative w-full max-w-lg mx-auto lg:max-w-none">
-            <div className="relative z-10 rounded-[20px] overflow-hidden shadow-premium-lg border border-premium-border bg-white p-2">
-              <div className="rounded-[12px] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[650px]">
+          <div className="block mt-12 lg:-mt-16 relative w-full flex justify-center lg:justify-start lg:translate-x-8">
+            <div className="relative z-10 rounded-[24px] overflow-hidden shadow-premium-lg border border-premium-border bg-white p-2 w-fit">
+              <div className="rounded-[16px] overflow-hidden bg-white">
                 <video
                   src="/videos/herovedio.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="w-full h-full object-cover"
+                  className="h-[450px] md:h-[650px] w-auto object-contain rounded-[12px]"
                 />
               </div>
             </div>
+            {/* Decorative background element to tie it to content */}
+            <div className="absolute -top-6 -right-6 w-32 h-32 bg-premium-primary/10 blur-3xl rounded-full z-0"></div>
           </div>
         </div>
       </div>

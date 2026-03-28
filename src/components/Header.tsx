@@ -16,6 +16,7 @@ export default function Header({ onBookAppointment }: HeaderProps) {
               alt="Cusp Dental Clinic Logo"
               fill
               priority
+              sizes="(max-width: 768px) 56px, 64px"
               className="object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>

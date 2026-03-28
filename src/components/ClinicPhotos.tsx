@@ -31,6 +31,7 @@ export default function ClinicPhotos({ onBookAppointment }: ClinicPhotosProps) {
                   src={img.src}
                   alt={img.alt}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
               </div>

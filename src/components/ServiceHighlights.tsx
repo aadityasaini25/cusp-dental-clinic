@@ -63,6 +63,7 @@ export default function ServiceHighlights() {
           src="/images/graphics/services_bg.png"
           alt="Services Background"
           fill
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white via-premium-section/95 to-premium-section"></div>
@@ -91,6 +92,7 @@ export default function ServiceHighlights() {
                   src={service.image}
                   alt={service.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-contain filter group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
               </div>

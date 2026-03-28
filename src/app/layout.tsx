@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     description: "Dr. Mohit Dhiman - 18+ Years Experience. Sector-56, Gurugram.",
     url: 'https://cuspdentalclinic.in/',
     siteName: "Cusp Dental Clinic",
+/*,
     images: [
       {
         url: '/og-image.jpg',
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Cusp Dental Clinic",
       },
-    ],
+    ],*/
     locale: 'en_IN',
     type: 'website',
   },
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Cusp Dental Clinic",
     description: "Premium Dental Care in Gurugram",
-    images: ['/og-image.jpg'],
+    // images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -66,10 +67,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#14D3D3" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> */}
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body 

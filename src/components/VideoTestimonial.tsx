@@ -18,6 +18,7 @@ export default function VideoTestimonial() {
                 src="/images/patent1.jpeg"
                 alt="Testimonial 1"
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 className="object-cover"
               />
             </div>
@@ -26,6 +27,7 @@ export default function VideoTestimonial() {
                 src="/images/Patient photos 5.jpeg"
                 alt="Testimonial 2"
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 className="object-cover"
               />
             </div>
@@ -34,6 +36,7 @@ export default function VideoTestimonial() {
                 src="/images/patent3.jpeg"
                 alt="Testimonial 3"
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 className="object-cover"
               />
             </div>
@@ -42,6 +45,7 @@ export default function VideoTestimonial() {
                 src="/images/Patient photos 6.jpeg"
                 alt="Testimonial 4"
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 className="object-cover"
               />
             </div>

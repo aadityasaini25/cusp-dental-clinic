@@ -33,6 +33,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
                   src="/images/doctor/dr mohit.png"
                   alt="Dr. Mohit Dhiman"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 25vw"
                   className="object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
@@ -63,6 +64,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
                   src="/images/doctor/dr sombir singh.jpg"
                   alt="Dr. Sombir Singh"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 25vw"
                   className="object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>

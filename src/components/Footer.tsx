@@ -12,6 +12,7 @@ export default function Footer() {
                 src="/images/logo.jpg"
                 alt="Cusp Dental Clinic"
                 fill
+                sizes="(max-width: 768px) 80px, 96px"
                 className="object-cover"
               />
             </div>
