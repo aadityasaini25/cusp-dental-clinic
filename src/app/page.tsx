@@ -110,7 +110,6 @@ export default function Home() {
         <ServiceHighlights />
         <FAQSection />
         <ClinicPhotos onBookAppointment={openPopup} />
-        <GoogleReviews />
         <CTABox onBookAppointment={openPopup} />
         <Footer />
       </div>

@@ -16,41 +16,44 @@ export default function StickyCTA({ isVisible, onBookAppointment }: StickyCtaPro
     return (
       <button
         onClick={() => setIsMinimized(false)}
-        className="fixed bottom-6 left-6 z-50 bg-premium-gradient text-white p-4 rounded-full shadow-premium hover:scale-110 transition-all flex items-center gap-2 animate-in fade-in slide-in-from-bottom-5 border border-white/20"
+        className="fixed bottom-8 right-8 z-[60] bg-premium-text text-white w-16 h-16 rounded-full shadow-2xl hover:bg-premium-primary transition-all flex items-center justify-center animate-in fade-in zoom-in group"
         aria-label="Expand Book Appointment"
       >
-        <span className="text-xl">📅</span>
-        <span className="hidden sm:inline font-bold text-xs tracking-widest uppercase pl-1">Invisalign Scan</span>
+        <span className="text-2xl group-hover:scale-110 transition-transform">📅</span>
+        <div className="absolute -top-2 -right-2 w-5 h-5 bg-premium-primary rounded-full animate-pulse border-2 border-white"></div>
       </button>
     );
   }
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-4xl bg-white/90 backdrop-blur-xl shadow-premium-lg rounded-[20px] p-5 md:p-6 z-50 animate-in fade-in slide-in-from-bottom-5 duration-700 border border-premium-border">
+    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-2xl bg-white/80 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-[32px] p-4 md:p-6 z-[60] animate-in fade-in slide-in-from-bottom-8 duration-700 border border-white/20">
       <button
         onClick={() => setIsMinimized(true)}
-        className="absolute -top-3 -right-3 bg-white text-premium-subtext hover:text-premium-primary rounded-full w-8 h-8 shadow-premium flex items-center justify-center border border-premium-border transition-colors z-10"
+        className="absolute -top-3 -right-3 bg-white text-premium-subtext hover:text-premium-primary rounded-full w-8 h-8 shadow-lg flex items-center justify-center border border-premium-border transition-colors z-10"
         aria-label="Minimize"
       >
         ✕
       </button>
-      <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="text-center md:text-left">
-          <h3 className="font-black text-xl md:text-2xl text-premium-text mb-1 tracking-tight">Transform Your <span className="text-premium-primary">Smile Today</span></h3>
-          <p className="text-premium-subtext font-bold text-xs uppercase tracking-widest">Specialist Consultation & Digital Scan Included</p>
+      
+      <div className="flex items-center justify-between gap-6">
+        <div className="hidden md:flex flex-col">
+          <p className="text-premium-primary font-black text-[10px] uppercase tracking-widest mb-1">Limited Offer</p>
+          <h3 className="font-black text-xl text-premium-text tracking-tight">Expert Consultation</h3>
         </div>
-        <div className="flex gap-4 w-full md:w-auto">
+        
+        <div className="flex items-center gap-3 w-full md:w-auto">
           <button
             onClick={onBookAppointment}
-            className="flex-1 md:flex-none bg-premium-gradient text-white px-10 py-4 rounded-[12px] font-bold text-sm tracking-wide shadow-premium hover:shadow-xl hover:opacity-90 transition-all hover:scale-[1.02]"
+            className="flex-1 md:flex-none bg-premium-text text-white px-8 py-4 rounded-2xl font-black text-sm tracking-tight hover:bg-premium-primary transition-all active:scale-95 shadow-lg"
           >
-            Book Invisalign Scan
+            Book Consult Now
           </button>
+          
           <a
             href="tel:+919599508322"
-            className="hidden sm:flex items-center justify-center bg-premium-section text-premium-primary border border-premium-border px-5 rounded-[12px] font-bold text-lg hover:opacity-80 transition-all shadow-sm"
+            className="flex items-center justify-center w-12 h-12 bg-premium-section text-premium-text rounded-2xl border border-premium-border hover:bg-white transition-all shadow-sm group"
           >
-            📞
+            <span className="text-xl group-hover:scale-110 transition-all">📞</span>
           </a>
         </div>
       </div>

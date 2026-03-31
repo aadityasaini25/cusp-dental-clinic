@@ -6,111 +6,101 @@ export default function ServiceHighlights() {
       title: "Advanced Clear Aligners",
       image: "/images/implant/aligner_dark_bg.png",
       description:
-        "Digitally planned clear aligner treatment at Cusp Dental Clinic for comfortable, precise, and nearly invisible teeth straightening.",
+        "Digitally planned clear aligner treatment for comfortable, precise, and nearly invisible teeth straightening.",
       benefits: [
         "Free 3D Scan & Simulation",
-        "Diamond Black Invisalign Provider",
-        "Digital smile analysis & planning",
-        "Virtually invisible & comfortable",
-        "Faster and predictable results",
+        "Diamond Black Provider",
+        "Clinical Aligner Strategy",
+        "Custom Treatment Plan",
       ],
     },
     {
-      title: "Invisalign Outcome Simulation",
+      title: "iTero 3D Digital Pro-Scan",
       image: "/images/implant/smile_design.png",
       description:
-        "See your future smile in minutes with our high-end 3D iTero digital simulation technology.",
+        "Experience our high-end 5D iTero digital technology. See your future smile in minutes with precise 3D simulations.",
       benefits: [
-        "Instant 3D smile preview",
-        "Digital tooth movement tracking",
-        "Personalized treatment sequence",
-        "Predictable aesthetic results",
+        "Instant 3D Preview",
+        "Invisalign Tracking",
+        "Predictable Results",
+        "No Messy Impressions",
       ],
     },
     {
-      title: "Invisalign Teen & First",
+      title: "Invisalign First/Teen",
       image: "/images/implant/teen_aligner_new.png",
       description:
-        "Custom-made clear aligners designed specifically for growing smiles, combining advanced technology with teen-friendly features.",
+        "Custom-made aligners specifically for growing smiles, combining advanced technology with teen-friendly features.",
       benefits: [
-        "SmartTrack material for comfort",
-        "Compliance indicators built-in",
-        "No dietary restrictions",
-        "Fewer emergency clinic visits",
-        "Confidence to smile freely",
+        "Growing Smile Expert",
+        "SmartTrack Comfort",
+        "Compliance Indicators",
+        "Teen Confidence Boost",
       ],
     },
     {
-      title: "Advanced Orthodontic Support",
+      title: "Elite Aligner Care",
       image: "/images/implant/elite_aligner_new.png",
       description:
-        "Expert orthodontic care specifically optimized for clear aligner patients, led by elite specialists.",
+        "Specialized orthodontic supervision for alignment cases, led by AIIMS and PGI specialists.",
       benefits: [
-        "15+ Years Orthodontic Expertise",
-        "PGI Chandigarh specialist lead",
-        "Advanced bite & jaw correction",
-        "Complex case management",
-        "Retainers & post-aligner care",
+        "18+ Years Expertise",
+        "PGI Specialist Lead",
+        "Complex Case Mastery",
+        "Post-Aligner Retention",
       ],
     },
   ];
 
   return (
-    <section className="relative bg-premium-section py-24 px-4 md:px-8 lg:px-12 overflow-hidden">
+    <section className="relative bg-[#0F172A] py-24 md:py-32 px-4 md:px-8 lg:px-12 overflow-hidden" id="services">
       {/* Background Graphic */}
-      <div className="absolute inset-0 z-0 opacity-5">
-        <Image
-          src="/images/graphics/services_bg.png"
-          alt="Services Background"
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-premium-section/95 to-premium-section"></div>
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-premium-primary/20 blur-[150px] rounded-full"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-premium-accent/10 blur-[150px] rounded-full"></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center md:text-left mb-16">
-          <p className="text-premium-primary font-bold text-xs md:text-sm uppercase tracking-[0.2em] mb-4">Our Expertise</p>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-premium-text mb-6 leading-tight">
-            Next-Gen <br className="hidden md:block" />
-            <span className="text-premium-primary">Digital Dentistry</span>
+        <div className="text-center mb-20">
+          <p className="text-premium-primary font-bold text-sm uppercase tracking-[0.2em] mb-4">Our Expertise</p>
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-white mb-6">
+            Advanced <span className="text-premium-primary">Digital Solutions</span>
           </h2>
-          <p className="text-premium-subtext text-lg md:text-xl max-w-3xl font-medium leading-relaxed">
-            Experience world-class precision with our advanced digital treatments and elite specialist care—all tailored to your comfort under one roof.
+          <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-medium">
+            World-class precision meets elite specialist care, tailored specifically to your comfort and goals.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {serviceData.map((service, index) => (
             <div
               key={index}
-              className="group premium-card p-8 flex flex-col hover:shadow-premium-lg transition-all duration-500"
+              className="group bg-slate-800/50 backdrop-blur-sm rounded-[32px] p-8 border border-slate-700/50 hover:border-premium-primary/50 transition-all duration-500 hover:-translate-y-2 flex flex-col"
             >
-              <div className="relative rounded-2xl mb-8 h-48 overflow-hidden bg-premium-bg border border-premium-border/50 p-4 transition-all duration-500 group-hover:bg-white">
+              <div className="relative rounded-2xl mb-8 h-48 overflow-hidden bg-slate-900/50 border border-slate-700/30 p-4 group-hover:bg-slate-900 transition-colors duration-500">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-contain filter group-hover:scale-110 transition-transform duration-700 ease-out"
+                  className="object-contain filter brightness-110 group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
               
-              <h3 className="font-bold mb-4 text-2xl text-premium-text tracking-tight group-hover:text-premium-primary transition-colors duration-300">
+              <h3 className="font-black mb-4 text-xl text-white tracking-tight group-hover:text-premium-primary transition-colors">
                 {service.title}
               </h3>
               
-              <p className="text-[15px] text-premium-subtext leading-relaxed mb-8 font-medium italic">
+              <p className="text-sm text-slate-400 leading-relaxed mb-8 font-medium">
                 {service.description}
               </p>
 
-              <div className="pt-8 border-t border-premium-border mt-auto">
-                <ul className="space-y-4 text-[14px] text-premium-text font-medium">
+              <div className="pt-6 border-t border-slate-700/50 mt-auto">
+                <ul className="space-y-3">
                   {service.benefits.map((b, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="text-premium-accent mt-1 shrink-0">✦</span>
-                      <span className="leading-snug">{b}</span>
+                    <li key={i} className="flex items-center gap-3 text-[13px] text-slate-300 font-bold">
+                      <span className="text-premium-primary text-xs">✦</span>
+                      {b}
                     </li>
                   ))}
                 </ul>

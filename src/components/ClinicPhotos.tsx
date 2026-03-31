@@ -13,38 +13,48 @@ export default function ClinicPhotos({ onBookAppointment }: ClinicPhotosProps) {
   ];
 
   return (
-    <section className="py-24 md:py-32 px-4 md:px-8 bg-premium-section" id="gallery">
-      <div className="max-w-[95%] 2xl:max-w-screen-2xl mx-auto w-full">
-        <p className="text-premium-primary font-bold text-sm uppercase tracking-[0.2em] mb-4">Our Facility</p>
-        <h2 className="text-4xl md:text-6xl font-black text-premium-text tracking-tight mb-8 leading-tight">
-          The <span className="text-premium-primary">Cusp Experience</span>
-        </h2>
-        <p className="text-premium-subtext text-lg md:text-xl font-medium max-w-2xl mb-16 leading-relaxed">
-          Visit us at SCO-55, Huda SCO Market Complex, Gurugram. State-of-the-art digital dentistry in a premium, welcoming environment.
-        </p>
+    <section className="py-24 md:py-32 px-4 md:px-8 bg-white overflow-hidden" id="gallery">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
+          <div className="max-w-2xl">
+            <p className="text-premium-primary font-bold text-sm uppercase tracking-[0.2em] mb-4">Our Facility</p>
+            <h2 className="text-4xl md:text-6xl font-black text-premium-text tracking-tight">
+              A <span className="text-premium-primary">Premium</span> Space for Your Smile
+            </h2>
+          </div>
+          <p className="text-premium-subtext text-lg font-medium max-w-sm md:text-right">
+            SCO-55, Huda SCO Market Complex, Gurugram. State-of-the-art digital dentistry.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
           {clinicImages.map((img, i) => (
-            <div key={i} className="relative aspect-[4/3] rounded-[18px] overflow-hidden shadow-premium group border border-premium-border bg-white p-2">
-              <div className="relative w-full h-full rounded-[12px] overflow-hidden">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                />
+            <div 
+              key={i} 
+              className="group relative aspect-[4/5] rounded-[40px] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700"
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-premium-text/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                <span className="text-white font-bold text-sm tracking-wider uppercase">{img.alt}</span>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center">
+        <div className="flex justify-center">
           <button
             onClick={onBookAppointment}
-            className="px-10 py-5 bg-premium-gradient text-white rounded-[12px] font-bold text-xl shadow-premium hover:shadow-xl hover:opacity-90 transition-all hover:scale-[1.03]"
+            className="group relative px-12 py-5 bg-premium-text text-white rounded-full font-black text-lg overflow-hidden transition-all hover:pr-16"
           >
-            Visit Our Clinic
+            <span className="relative z-10 transition-all">Experience Cusp Standard</span>
+            <span className="absolute right-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">→</span>
+            <div className="absolute inset-0 bg-premium-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
           </button>
         </div>
       </div>

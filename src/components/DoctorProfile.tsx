@@ -5,106 +5,92 @@ interface DoctorProfileProps {
 }
 
 export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps) {
+  const doctors = [
+    {
+      name: "Dr. Mohit Dhiman",
+      title: "Clinical Director & Digital Strategist",
+      credentials: "BDS, MDS (Specialist) - AIIMS Alumnus",
+      bio: "An esteemed AIIMS alumnus with over 18 years of clinical leadership, Dr. Mohit Dhiman is a pioneer in High-Precision Digital Aligner Strategy. He specializes in selecting and planning complex cases that others might find challenging, ensuring every smile transformation is backed by elite-level clinical expertise.",
+      expertise: ["Digital Aligner Case Selection", "Complex Case Planning", "Orthodontic Strategy"],
+      image: "/images/doctor/dr mohit.png",
+    },
+    {
+      name: "Dr. Sombir Singh",
+      title: "Diamond Black Invisalign Provider",
+      credentials: "MDS (Orthodontics) - PGIMER Chandigarh",
+      bio: "Recognized in the Top 1% Global Tier of Invisalign providers, Dr. Sombir Singh is North India's premier orthodontist. With an MDS from the prestigious PGI Chandigarh and 15+ years of specialized excellence, he has successfully transformed over 5000+ smiles, bringing unparalleled skill to every Invisalign journey.",
+      expertise: ["Invisalign Diamond Expert", "Clear Aligner Therapy", "Growth Modulation"],
+      image: "/images/doctor/dr sombir singh.jpg",
+    },
+  ];
+
   return (
-    <section className="relative bg-premium-bg py-24 md:py-32 overflow-hidden" id="doctors">
-      {/* Background Graphic Accents */}
-      <div className="absolute top-0 left-0 w-1/3 h-full bg-premium-primary/5 blur-[120px] rounded-full -ml-20"></div>
-      <div className="absolute bottom-0 right-0 w-1/3 h-full bg-premium-section/50 blur-[120px] rounded-full -mr-20"></div>
-
+    <section className="relative bg-premium-section py-20 overflow-hidden" id="doctors">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="text-center md:text-left mb-20 relative z-10">
-          <p className="text-premium-primary font-bold text-sm uppercase tracking-[0.2em] mb-4">Our Specialists</p>
-          <h2 className="text-4xl md:text-6xl font-black text-premium-text tracking-tight mb-8">
-            Meet Your <span className="text-premium-primary">Doctors</span>
-          </h2>
-          <p className="mt-4 text-premium-subtext max-w-3xl text-lg md:text-xl font-medium leading-relaxed">
-            Combining digital workflows with unparalleled expertise — led by{" "}
-            <span className="font-bold text-premium-text underline decoration-premium-accent/30 underline-offset-4">Dr. Mohit Dhiman</span>, working alongside a
-            powerhouse team of specialists from PGI Chandigarh, AIIMS, and Army Dental College.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-stretch gap-10 lg:gap-16 relative z-10">
-          {/* Dr. Mohit Dhiman */}
-          <div className="group relative">
-            <div className="absolute -inset-[1px] bg-gradient-to-r from-premium-primary via-premium-accent to-premium-primary rounded-[30px] blur-[2px] opacity-20 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative flex flex-col md:flex-row gap-8 premium-card p-10 md:p-12 hover:shadow-premium-lg border-opacity-30 h-full overflow-hidden">
-              
-              <div className="w-full md:w-2/5 flex justify-center items-center">
-                <div className="relative w-full aspect-[4/5] rounded-[18px] overflow-hidden shadow-premium border border-premium-border/50">
-                  <Image
-                    src="/images/doctor/dr mohit.png"
-                    alt="Dr. Mohit Dhiman"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 25vw"
-                    className="object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
-              </div>
-              <div className="w-full md:w-3/5 text-center md:text-left flex flex-col justify-center">
-                <h3 className="text-2xl md:text-4xl font-black text-premium-text mb-3 tracking-tight">
-                  Dr. Mohit Dhiman
-                </h3>
-                <p className="text-premium-accent font-bold text-xs md:text-sm uppercase tracking-[0.2em] mb-6">
-                  Digital Aligner Strategist & Clinical Director
-                </p>
-                <div className="text-premium-subtext text-sm md:text-base leading-relaxed space-y-4 font-medium italic">
-                  <p>
-                    With 18+ years of clinical leadership, Dr. Mohit Dhiman is a pioneer in <span className="text-premium-text font-bold uppercase tracking-tight">Digital Aligner Case Selection & Planning</span>. 
-                  </p>
-                  <p>
-                    Having served at India's most prestigious institutes (Maulana Azad, RML, and PGIMER Chandigarh), he brings a high-precision digital approach to clear aligner therapy, ensuring every scan translates into a predictable, perfect smile.
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8 text-center md:text-left">
+          <div>
+            <p className="text-premium-primary font-bold text-xs uppercase tracking-[0.2em] mb-3">Elite Leadership</p>
+            <h2 className="text-4xl md:text-5xl font-black text-premium-text tracking-tighter">
+              The Doctors <span className="text-premium-primary">Behind the Smiles</span>
+            </h2>
           </div>
-
-          {/* Dr. Sombir Singh */}
-          <div className="group relative">
-            <div className="absolute -inset-[1px] bg-gradient-to-r from-premium-accent via-premium-primary to-premium-accent rounded-[30px] blur-[2px] opacity-20 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative flex flex-col md:flex-row gap-8 premium-card p-10 md:p-12 hover:shadow-premium-lg border-opacity-30 h-full overflow-hidden">
-              
-              <div className="w-full md:w-2/5 flex justify-center items-center">
-                <div className="relative w-full aspect-[4/5] rounded-[18px] overflow-hidden shadow-premium border border-premium-border/50">
-                  <Image
-                    src="/images/doctor/dr sombir singh.jpg"
-                    alt="Dr. Sombir Singh"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 25vw"
-                    className="object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
-              </div>
-              <div className="w-full md:w-3/5 text-center md:text-left flex flex-col justify-center">
-                <h3 className="text-2xl md:text-4xl font-black text-premium-text mb-3 tracking-tight">
-                  Dr. Sombir Singh
-                </h3>
-                <p className="text-premium-accent font-bold text-xs md:text-sm uppercase tracking-[0.2em] mb-6">
-                  Diamond Black Invisalign Provider & Orthodontist
-                </p>
-                <div className="text-premium-subtext text-sm md:text-base leading-relaxed space-y-4 font-medium italic">
-                  <p>
-                    Recognized as a <span className="text-premium-text font-bold uppercase tracking-tight">Diamond Black Invisalign Provider (Top 1% Global Tier)</span>, Dr. Sombir Singh is North India's premier orthodontist.
-                  </p>
-                  <p>
-                    An MDS from PGIMER Chandigarh with 15+ years of specialized orthodontic excellence, he has successfully transformed 5000+ smiles using advanced dentofacial orthopedics and clear aligner technology.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="bg-white px-6 py-3 rounded-2xl border border-premium-border shadow-sm">
+            <span className="text-xs font-black text-premium-subtext uppercase tracking-widest italic">15+ Years AIIMS & PGI Excellence</span>
           </div>
         </div>
 
-        <div className="mt-16 flex justify-center">
-          <button
-            onClick={onBookAppointment}
-            className="px-10 py-5 bg-premium-gradient text-white rounded-[12px] font-bold text-xl shadow-premium hover:shadow-premium-lg hover:opacity-90 transition-all hover:scale-[1.03] tracking-wide"
-          >
-            Start Your Invisalign Journey
-          </button>
+        <div className="grid md:grid-cols-2 gap-8">
+          {doctors.map((doc) => (
+            <div 
+              key={doc.name}
+              className="group bg-white rounded-[40px] p-8 border border-premium-border hover:border-premium-primary/40 transition-all duration-500 shadow-sm hover:shadow-2xl flex flex-col xl:flex-row items-center gap-8"
+            >
+              <div className="relative w-40 h-48 sm:w-48 sm:h-64 rounded-[32px] overflow-hidden flex-shrink-0 shadow-lg group-hover:scale-[1.02] transition-transform">
+                <Image
+                  src={doc.image}
+                  alt={doc.name}
+                  fill
+                  sizes="200px"
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="flex-grow text-center xl:text-left">
+                <span className="inline-block px-3 py-1 rounded-full bg-premium-primary/5 text-premium-primary text-[10px] font-black uppercase tracking-widest mb-4">
+                  {doc.credentials}
+                </span>
+                <h3 className="text-2xl font-black text-premium-text mb-2 tracking-tight">
+                  {doc.name}
+                </h3>
+                <p className="text-xs font-black text-premium-primary uppercase tracking-widest mb-4">
+                  {doc.title}
+                </p>
+                <p className="text-premium-subtext text-sm leading-relaxed mb-6 font-medium">
+                  {doc.bio}
+                </p>
+                
+                <div className="flex flex-wrap gap-2 mb-8 justify-center xl:justify-start">
+                  {doc.expertise.map(skill => (
+                    <span key={skill} className="px-3 py-1 bg-premium-section rounded-lg text-[10px] font-bold text-premium-text border border-premium-border">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+
+                <button
+                  onClick={onBookAppointment}
+                  className="w-full xl:w-auto px-6 py-3 bg-premium-text text-white rounded-xl text-xs font-black hover:bg-premium-primary transition-all active:scale-95 flex items-center justify-center gap-2"
+                >
+                  Claim Invisalign Consultation <span>→</span>
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* Decorative Accents */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-premium-primary/5 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
     </section>
   );
 }

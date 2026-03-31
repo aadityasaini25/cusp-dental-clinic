@@ -4,25 +4,43 @@ interface CTABoxProps {
 
 export default function CTABox({ onBookAppointment }: CTABoxProps) {
   return (
-    <section className="bg-premium-section py-24 md:py-32 px-4 md:px-8 border-t border-premium-border/50 relative overflow-hidden">
-      {/* Background Graphic Accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-premium-primary/5 blur-[120px] rounded-full"></div>
-
-      <div className="max-w-4xl mx-auto text-center relative z-10">
-        <h2 className="text-4xl md:text-6xl font-black text-premium-text mb-8 tracking-tight leading-tight">
-          Ready to <br />
-          <span className="text-premium-primary text-3xl md:text-5xl">Start Your Invisalign Journey?</span>
+    <section className="bg-white py-24 md:py-32 px-4 md:px-8 relative overflow-hidden">
+      <div className="max-w-5xl mx-auto text-center relative z-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+        <p className="text-premium-primary font-bold text-sm uppercase tracking-[0.2em] mb-4">Limited Availability</p>
+        <h2 className="text-4xl md:text-7xl font-black text-premium-text mb-8 tracking-tighter leading-[0.95]">
+          Experience the <br className="hidden md:block" />
+          <span className="text-premium-primary underline decoration-premium-primary/20 underline-offset-8">Cusp Difference</span>
         </h2>
-        <p className="text-premium-subtext text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium leading-relaxed italic">
-          Complete Invisalign evaluation and 3D digital scan included. We’re here to answer your questions and find a time that works for you.
+        <p className="text-premium-subtext text-lg md:text-2xl mb-12 max-w-2xl mx-auto font-medium leading-relaxed italic">
+          Join 5000+ happy patients who transformed their smiles with North India's premier Diamond Invisalign provider.
         </p>
-        <button
-          onClick={onBookAppointment}
-          className="px-12 py-5 bg-premium-gradient text-white rounded-[12px] font-bold text-xl shadow-premium hover:shadow-premium-lg hover:opacity-90 transition-all hover:scale-[1.03] tracking-wide"
-        >
-          Book Your Invisalign Scan
-        </button>
+        
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <button
+            onClick={onBookAppointment}
+            className="w-full sm:w-auto px-12 py-5 bg-premium-text text-white rounded-full font-black text-xl shadow-2xl hover:bg-premium-primary transition-all hover:-translate-y-1 active:scale-95"
+          >
+            Book Invisalign Consult
+          </button>
+          <div className="flex items-center gap-4 text-left">
+            <div className="flex -space-x-3">
+              {[1, 2, 3].map(i => (
+                <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
+                  <div className="w-full h-full bg-premium-section" />
+                </div>
+              ))}
+            </div>
+            <div>
+              <p className="text-premium-text font-black text-sm leading-none">5000+</p>
+              <p className="text-premium-subtext text-[10px] font-bold uppercase tracking-widest mt-1">Success Stories</p>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* Decorative Accents */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-premium-primary/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-premium-accent/5 blur-[120px] rounded-full -translate-x-1/2 translate-y-1/2"></div>
     </section>
   );
 }

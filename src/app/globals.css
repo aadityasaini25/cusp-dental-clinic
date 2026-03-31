@@ -4,16 +4,19 @@
 
 @layer base {
   :root {
-    --premium-bg: #F9FBFD;
-    --premium-section: #F1F5F9;
+    --premium-bg: #FFFFFF;
+    --premium-section: #F8FAFC;
     --premium-primary: #14D3D3;
+    --premium-primary-dark: #0EA5A5;
     --premium-accent: #F472B6;
-    --premium-text: #111827;
-    --premium-subtext: #4B5563;
+    --premium-text: #0F172A;
+    --premium-subtext: #475569;
     --premium-border: #E2E8F0;
-    --premium-gradient: linear-gradient(135deg, #F472B6 0%, #14D3D3 100%);
-    --shadow-soft: 0 4px 20px -2px rgba(244, 114, 182, 0.1);
-    --shadow-premium: 0 10px 40px -10px rgba(20, 211, 211, 0.3);
+    --premium-header-height: 80px;
+    --premium-gradient: linear-gradient(135deg, #14D3D3 0%, #0EA5A5 100%);
+    --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-premium: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-premium-hover: 0 25px 30px -5px rgb(0 0 0 / 0.15), 0 12px 15px -6px rgb(0 0 0 / 0.1);
   }
 
   html {
@@ -24,8 +27,8 @@
 
   body {
     background-color: var(--premium-bg);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.7;
+    font-family: var(--font-outfit), var(--font-inter), sans-serif;
+    line-height: 1.6;
     color: var(--premium-text);
   }
 
@@ -37,17 +40,19 @@
 
 @layer utilities {
   .text-gradient-primary {
-    @apply bg-gradient-to-r from-premium-accent to-premium-primary bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-premium-primary to-premium-primary-dark bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
   }
 
   .premium-card {
-    @apply bg-white rounded-[18px] border border-premium-border transition-all duration-500;
-    box-shadow: var(--shadow-soft);
+    @apply bg-white rounded-[24px] border border-premium-border transition-all duration-500 shadow-sm;
   }
 
   .premium-card:hover {
-    @apply -translate-y-1;
-    box-shadow: var(--shadow-premium);
+    @apply -translate-y-2 shadow-xl border-premium-primary/20;
   }
 
   .premium-shadow {

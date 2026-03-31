@@ -1,59 +1,66 @@
 const points = [
   {
-    title: "Specialist Team",
-    desc: "Your care is guided by a formidable team of specialist dentists hailing from prestigious institutes including AIIMS, PGI Chandigarh, Maulana Azad, and Army Dental College.",
+    title: "Elite Specialist Team",
+    desc: "Expert care led by specialists from India's top institutes — AIIMS, PGI Chandigarh & Maulana Azad.",
+    icon: "👨‍⚕️",
   },
   {
-    title: "Diamond Black Invisalign Provider",
-    desc: "Recognized as a leading Diamond Black Invisalign provider for over 4 years straight. Experience unmatched expertise in clear aligner therapy at Cusp Dental.",
+    title: "Diamond Invisalign",
+    desc: "North India's premier Diamond Black Invisalign provider with 18+ years of clinical excellence.",
+    icon: "💎",
   },
   {
-    title: "Advanced Technology & Comfort",
-    desc: "Equipped with state-of-the-art in-house digital scanners for precise diagnostics, and nitrous sedation machines to ensure a completely painless, anxiety-free experience.",
+    title: "100% Digital Scan",
+    desc: "State-of-the-art iTero 5D scanners for instant 3D smile simulations and precise treatment planning.",
+    icon: "🔬",
   },
   {
-    title: "Fully Digital Workflow & Easy EMI",
-    desc: "From Free Scan & Simulation (Invisalign & Clear Aligner Simulation) to your final treatment, everything is digitally planned. We also offer No-Cost EMI options to make premium care accessible.",
+    title: "Interest-Free EMI",
+    desc: "Premium smile transformations made accessible with 0% interest EMI and flexible payment plans.",
+    icon: "💳",
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 md:py-32 px-4 md:px-8 bg-premium-section relative overflow-hidden">
-      {/* Background Graphic Accent */}
-      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-premium-primary/5 blur-[150px] rounded-full pointer-events-none"></div>
-      
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center md:text-left mb-16">
-          <p className="text-premium-primary font-bold text-xs md:text-sm uppercase tracking-[0.2em] mb-4">The Cusp Advantage</p>
-          <h2 className="text-4xl md:text-6xl font-black text-premium-text tracking-tight mb-6 leading-tight">
-            Why Choose <br />
-            <span className="text-premium-primary">Cusp Dental?</span>
+    <section className="py-24 md:py-32 px-4 md:px-8 bg-premium-section relative overflow-hidden" id="why-choose">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-20 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+          <p className="text-premium-primary font-bold text-sm uppercase tracking-[0.2em] mb-4">Precision & Care</p>
+          <h2 className="text-4xl md:text-6xl font-black text-premium-text tracking-tight mb-6">
+            The <span className="text-premium-primary">Cusp</span> Standard
           </h2>
+          <p className="text-premium-subtext text-lg font-medium max-w-2xl mx-auto">
+            We combine elite orthodontic expertise with cutting-edge digital technology 
+            to deliver results that last a lifetime.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {points.map((item, i) => (
             <div
               key={i}
-              className="premium-card p-10 md:p-12 hover:shadow-premium-lg flex flex-col items-start gap-6 group"
+              className="group premium-card p-10 hover:bg-white transition-all duration-500 animate-in fade-in slide-in-from-bottom-8 duration-700"
+              style={{ animationDelay: `${i * 100}ms` }}
             >
-              <div className="w-14 h-14 rounded-[16px] bg-premium-bg border border-premium-border flex items-center justify-center text-3xl shadow-sm transition-transform group-hover:scale-110 duration-300">
-                {i === 0 ? "🏆" : i === 1 ? "💎" : i === 2 ? "⚡" : "🏦"}
+              <div className="w-16 h-16 rounded-2xl bg-premium-section border border-premium-border flex items-center justify-center text-3xl mb-8 group-hover:scale-110 group-hover:bg-premium-primary/5 transition-all duration-500">
+                {item.icon}
               </div>
-              <div>
-                <h3 className="font-bold text-2xl md:text-3xl text-premium-text mb-4 leading-tight">
-                  {item.title}
-                </h3>
-                <p className="text-premium-subtext text-lg font-medium leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-              <div className="h-1 w-12 bg-premium-accent/30 rounded-full group-hover:w-20 transition-all duration-300"></div>
+              <h3 className="font-black text-xl text-premium-text mb-4 leading-tight group-hover:text-premium-primary transition-colors">
+                {item.title}
+              </h3>
+              <p className="text-premium-subtext text-sm font-medium leading-relaxed">
+                {item.desc}
+              </p>
+              
+              <div className="mt-8 h-1 w-10 bg-premium-primary/20 rounded-full group-hover:w-20 group-hover:bg-premium-primary transition-all duration-500"></div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-premium-primary/5 to-transparent pointer-events-none"></div>
     </section>
   );
 }

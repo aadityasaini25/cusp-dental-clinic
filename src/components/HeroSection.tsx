@@ -6,91 +6,91 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-32 pb-20 overflow-hidden bg-premium-bg">
-      {/* Background Graphic */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white via-premium-bg to-premium-bg"></div>
-        <div className="absolute -top-[10%] -right-[10%] w-[50%] h-[60%] bg-premium-primary/5 blur-[120px] rounded-full"></div>
-        <div className="absolute -bottom-[10%] -left-[10%] w-[40%] h-[50%] bg-premium-section/50 blur-[100px] rounded-full"></div>
+    <section className="relative min-h-screen flex flex-col items-center justify-start pt-[var(--premium-header-height)] pb-20 overflow-hidden bg-white">
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[10%] left-[-5%] w-[40%] h-[40%] bg-premium-primary/5 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-[10%] right-[-5%] w-[40%] h-[40%] bg-premium-accent/5 blur-[120px] rounded-full"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-10 animate-in fade-in slide-in-from-left-10 duration-1000">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-premium-border text-premium-primary text-sm font-semibold tracking-wide shadow-sm">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-premium-primary/50"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-premium-primary"></span>
-              </span>
-              Advanced Invisalign Care
-            </div>
+      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 w-full flex flex-col items-center text-center mt-12 md:mt-20">
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-premium-text leading-[1.05] tracking-tight">
-              Crafting Your <br />
-              <span className="text-gradient-primary">Perfect Smile</span> <br />
-              with Precision.
-            </h1>
 
-            <p className="text-premium-subtext text-lg md:text-xl font-medium leading-relaxed max-w-xl italic">
-              Experience the future of dentistry with{" "}
-              <span className="text-premium-text font-bold underline decoration-premium-primary/30 underline-offset-8">Dr. Mohit Dhiman</span>, 
-              expert in{" "}
-              <span className="text-gradient-primary font-black">Invisalign & Clear Aligners</span>. 
-              Led by elite orthodontic expertise from AIIMS & PGI Chandigarh.
-            </p>
+        {/* Main Heading */}
+        <h1 className="text-5xl md:text-8xl font-black text-premium-text leading-[1.05] tracking-tight max-w-5xl animate-in fade-in slide-in-from-top-6 duration-1000 delay-100">
+          Invisalign & <br />
+          <span className="text-gradient-primary">Aligner Excellence</span>
+        </h1>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button
-                onClick={onBookAppointment}
-                className="px-10 py-5 bg-premium-gradient text-white rounded-[12px] font-bold text-lg shadow-premium hover:shadow-premium-lg hover:opacity-90 transition-all hover:scale-105"
-              >
-                Book Invisalign Scan
-              </button>
-              <a
-                href="tel:+919599508322"
-                className="px-8 py-4 bg-white text-premium-text border border-premium-border rounded-[12px] font-bold text-lg text-center hover:bg-gray-50 transition-all shadow-sm"
-              >
-                Call Specialist
-              </a>
-            </div>
+        {/* Sub-headline */}
+        <p className="mt-8 text-lg md:text-xl text-premium-subtext max-w-2xl font-medium leading-relaxed animate-in fade-in slide-in-from-top-8 duration-1000 delay-200">
+          Experience North India's premier 
+          <span className="text-premium-text font-bold"> Diamond Black Invisalign</span> center. 
+          Expert orthodontic care led by elite specialists from AIIMS & PGI.
+        </p>
 
-            <div className="flex items-center justify-between sm:justify-start gap-6 sm:gap-10 pt-10 border-t border-premium-border max-w-xl">
-              <div className="text-center sm:text-left shrink-0">
-                <div className="text-2xl sm:text-3xl font-black text-premium-text">18+</div>
-                <div className="text-premium-subtext text-xs sm:text-sm font-semibold uppercase tracking-wider">Years Exp.</div>
-              </div>
-              <div className="h-10 w-px bg-premium-border"></div>
-              <div className="text-center sm:text-left shrink-0">
-                <div className="text-2xl sm:text-3xl font-black text-premium-text">15k+</div>
-                <div className="text-premium-subtext text-xs sm:text-sm font-semibold uppercase tracking-wider">Happy Smiles</div>
-              </div>
-              <div className="h-10 w-px bg-premium-border"></div>
-              <div className="text-center sm:text-left">
-                <div className="text-2xl sm:text-3xl font-black text-premium-text flex items-center justify-center sm:justify-start gap-1.5">
-                  PGI | AIIMS
-                </div>
-                <div className="text-premium-subtext text-[10px] sm:text-[11px] font-bold leading-tight max-w-[140px] sm:max-w-[180px] uppercase tracking-wider">
-                  Experts from PGI Chandigarh, AIIMS & Army Dental College
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="block mt-12 lg:-mt-16 relative w-full flex justify-center lg:justify-start lg:translate-x-8">
-            <div className="relative z-10 rounded-[24px] overflow-hidden shadow-premium-lg border border-premium-border bg-white p-2 w-fit">
-              <div className="rounded-[16px] overflow-hidden bg-white">
+        {/* Central Graphic & Form Container */}
+        <div className="relative mt-16 w-full max-w-6xl grid lg:grid-cols-12 gap-12 items-center animate-in fade-in zoom-in-95 duration-1000 delay-300">
+          {/* Main Graphic */}
+          <div className="lg:col-span-12 flex justify-center">
+            <div className="relative group">
+              {/* Decorative Rings */}
+              <div className="absolute -inset-10 border border-premium-primary/10 rounded-full animate-[spin_20s_linear_infinite] hidden md:block"></div>
+              <div className="absolute -inset-20 border border-premium-accent/5 rounded-full animate-[spin_30s_linear_infinite_reverse] hidden md:block"></div>
+              
+              <div className="relative z-10 w-full max-w-4xl aspect-video rounded-[32px] overflow-hidden shadow-2xl border-4 border-white transition-transform duration-700 group-hover:scale-[1.01]">
                 <video
-                  src="/videos/herovedio.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="h-[450px] md:h-[650px] w-auto object-contain rounded-[12px]"
-                />
+                  className="w-full h-full object-cover"
+                >
+                  <source src="/videos/herovedio.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
-            {/* Decorative background element to tie it to content */}
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-premium-primary/10 blur-3xl rounded-full z-0"></div>
+          </div>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="mt-12 flex flex-col sm:flex-row gap-5 items-center justify-center animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500">
+          <button
+            onClick={onBookAppointment}
+            className="px-10 py-5 bg-premium-gradient text-white rounded-full font-black text-lg shadow-xl shadow-premium-primary/20 hover:shadow-2xl hover:shadow-premium-primary/30 transition-all hover:-translate-y-1 active:scale-95 group"
+          >
+            Book My Invisalign Consult
+            <span className="inline-block transition-transform group-hover:translate-x-1 ml-2">→</span>
+          </button>
+          
+          <a
+            href="tel:+919599508322"
+            className="px-10 py-5 bg-white text-premium-text border-2 border-premium-border rounded-full font-black text-lg hover:border-premium-primary transition-all shadow-sm flex items-center gap-3"
+          >
+            <span className="text-premium-primary">📞</span> +91 95995 08322
+          </a>
+        </div>
+
+        {/* Trust Stats */}
+        <div className="mt-20 pt-10 border-t border-premium-border/50 w-full grid grid-cols-2 md:grid-cols-4 gap-10 items-center justify-center animate-in fade-in duration-1000 delay-700">
+          <div className="text-center group">
+            <div className="text-3xl md:text-4xl font-black text-premium-text group-hover:text-premium-primary transition-colors duration-300">18+</div>
+            <div className="text-[10px] font-bold text-premium-subtext uppercase tracking-widest mt-1">Years of Practice</div>
+          </div>
+          <div className="text-center group">
+            <div className="text-3xl md:text-4xl font-black text-premium-text group-hover:text-premium-primary transition-colors duration-300">15k+</div>
+            <div className="text-[10px] font-bold text-premium-subtext uppercase tracking-widest mt-1">Successful Cases</div>
+          </div>
+          <div className="text-center group">
+            <div className="text-3xl md:text-4xl font-black text-premium-text group-hover:text-premium-primary transition-colors duration-300">5.0</div>
+            <div className="text-[10px] font-bold text-premium-subtext uppercase tracking-widest mt-1 flex items-center justify-center gap-1">
+              Google Rating <span className="text-yellow-400">★★★★★</span>
+            </div>
+          </div>
+          <div className="text-center group">
+            <div className="text-3xl md:text-4xl font-black text-premium-text group-hover:text-premium-primary transition-colors duration-300">Elite</div>
+            <div className="text-[10px] font-bold text-premium-subtext uppercase tracking-widest mt-1">Invisalign Tier</div>
           </div>
         </div>
       </div>

@@ -10,7 +10,6 @@ interface PopupFormProps {
   seconds: number;
 }
 
-// Set your Google Apps Script web app URL here to receive submissions (or use env NEXT_PUBLIC_BOOKING_SCRIPT_URL)
 const BOOKING_SCRIPT_URL = process.env.NEXT_PUBLIC_BOOKING_SCRIPT_URL || '';
 
 export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFormProps) {
@@ -52,99 +51,91 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-premium-primary/10 backdrop-blur-md flex items-center justify-center z-[999] p-4 animate-in fade-in duration-300">
-      <div className="bg-white rounded-[24px] p-8 md:p-12 w-full max-w-xl max-h-[90vh] overflow-y-auto overflow-x-hidden relative shadow-premium-lg border border-premium-border">
-        {/* Decorative Graphic Accents */}
-        <div className="absolute -top-20 -right-20 w-40 h-40 bg-premium-primary/5 blur-[90px] rounded-full pointer-events-none z-0"></div>
-        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-premium-section/50 blur-[90px] rounded-full pointer-events-none z-0"></div>
-
+    <div className="fixed inset-0 bg-[#0F172A]/80 backdrop-blur-xl flex items-center justify-center z-[999] p-4 animate-in fade-in duration-500">
+      <div className="bg-white rounded-[40px] p-8 md:p-12 w-full max-w-xl max-h-[90vh] overflow-y-auto overflow-x-hidden relative shadow-2xl border border-white/20">
+        
         {/* Header */}
-        <div className="flex justify-between items-start mb-10 relative z-10">
+        <div className="flex justify-between items-start mb-10">
           <div>
-            <p className="text-premium-primary font-bold text-xs uppercase tracking-widest mb-3">Priority Booking</p>
-            <h2 className="text-3xl md:text-4xl font-black text-premium-text leading-tight tracking-tight">
+            <p className="text-premium-primary font-black text-[10px] uppercase tracking-[0.2em] mb-3">Priority Access</p>
+            <h2 className="text-3xl md:text-4xl font-black text-premium-text leading-[0.95] tracking-tight">
               Book Your <br />
-              <span className="text-premium-primary">Consultation</span>
+              <span className="text-premium-primary">Invisalign Consultation</span>
             </h2>
           </div>
           <button 
-            onClick={(e) => { 
-              e.preventDefault();
-              e.stopPropagation();
-              onClose(); 
-            }} 
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-premium-section text-premium-text hover:bg-premium-border transition-all border border-premium-border shadow-sm active:scale-95 z-50 cursor-pointer"
-            aria-label="Close"
+            onClick={onClose} 
+            className="w-12 h-12 flex items-center justify-center rounded-2xl bg-premium-section text-premium-text hover:bg-premium-border transition-all active:scale-95"
           >
-            <span className="text-xl pointer-events-none">✕</span>
+            <span className="text-xl">✕</span>
           </button>
-        </div>        {/* Countdown */}
-        <div className="bg-white border-2 border-premium-primary/10 text-premium-text p-6 rounded-[20px] mb-10 text-center shadow-sm relative overflow-hidden group">
-          <div className="absolute top-0 left-0 w-1 h-full bg-premium-primary"></div>
-          <p className="text-[10px] uppercase tracking-widest text-premium-primary font-black mb-2">⏱️ Priority Slot Expires In</p>
-          <div className="text-4xl md:text-5xl font-black text-premium-text tabular-nums tracking-tighter">
-            {minutes.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}
-          </div>
-          <p className="text-[11px] text-premium-accent mt-3 font-bold uppercase tracking-tight">Limited clinical availability remains</p>
         </div>
 
-        {/* FORM */}
-        <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <label className="block text-[11px] uppercase tracking-widest text-premium-text/60 font-black ml-1">Full Name</label>
-              <input
-                type="text"
-                name="fullName"
-                required
-                className="w-full bg-gray-50/50 border border-premium-border rounded-[12px] p-4 text-premium-text font-bold placeholder:text-gray-300 focus:bg-white focus:border-premium-primary/50 focus:ring-4 focus:ring-premium-primary/5 transition-all outline-none"
-                placeholder="e.g. Rahul Sharma"
-              />
-            </div>
+        {/* Countdown */}
+        <div className="bg-premium-section rounded-[32px] p-8 mb-10 text-center border border-premium-border relative group overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-premium-primary to-transparent"></div>
+          <p className="text-[10px] uppercase tracking-widest text-premium-subtext font-black mb-3">⏱️ Priority Slot Expires In</p>
+          <div className="text-5xl md:text-6xl font-black text-premium-text tabular-nums tracking-tighter">
+            {minutes.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}
+          </div>
+          <p className="text-[10px] text-premium-primary mt-4 font-black uppercase tracking-widest animate-pulse">Limited availability remains</p>
+        </div>
 
-            <div className="space-y-2">
-              <label className="block text-[11px] uppercase tracking-widest text-premium-text/60 font-black ml-1">Phone Number</label>
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="space-y-1.5">
+            <label className="text-[10px] font-black text-premium-primary uppercase tracking-widest ml-1">Full Name</label>
+            <input
+              type="text"
+              name="fullName"
+              required
+              className="w-full bg-premium-section border border-premium-border rounded-2xl p-5 text-premium-text font-bold placeholder:text-gray-400 focus:bg-white focus:border-premium-primary focus:ring-4 focus:ring-premium-primary/5 transition-all outline-none"
+              placeholder="Full Name"
+            />
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="space-y-1.5">
+              <label className="text-[10px] font-black text-premium-primary uppercase tracking-widest ml-1">Phone</label>
               <input
                 type="tel"
                 name="phoneNumber"
                 required
-                className="w-full bg-gray-50/50 border border-premium-border rounded-[12px] p-4 text-premium-text font-bold placeholder:text-gray-300 focus:bg-white focus:border-premium-primary/50 focus:ring-4 focus:ring-premium-primary/5 transition-all outline-none"
+                className="w-full bg-premium-section border border-premium-border rounded-2xl p-5 text-premium-text font-bold focus:bg-white focus:border-premium-primary focus:ring-4 focus:ring-premium-primary/5 transition-all outline-none"
                 placeholder="+91 00000 00000"
+              />
+            </div>
+            <div className="space-y-1.5">
+              <label className="text-[10px] font-black text-premium-primary uppercase tracking-widest ml-1">Email</label>
+              <input
+                type="email"
+                name="email"
+                required
+                className="w-full bg-premium-section border border-premium-border rounded-2xl p-5 text-premium-text font-bold focus:bg-white focus:border-premium-primary focus:ring-4 focus:ring-premium-primary/5 transition-all outline-none"
+                placeholder="Email Address"
               />
             </div>
           </div>
 
-          <div className="space-y-2">
-            <label className="block text-[11px] uppercase tracking-widest text-premium-text/60 font-black ml-1">Email Address</label>
-            <input
-              type="email"
-              name="email"
-              required
-              className="w-full bg-gray-50/50 border border-premium-border rounded-[12px] p-4 text-premium-text font-bold placeholder:text-gray-300 focus:bg-white focus:border-premium-primary/50 focus:ring-4 focus:ring-premium-primary/5 transition-all outline-none"
-              placeholder="rahul@example.com"
-            />
-          </div>
-
-          <div className="space-y-2">
-            <label className="block text-[11px] uppercase tracking-widest text-premium-text/60 font-black ml-1">Dental Concern</label>
+          <div className="space-y-1.5">
+            <label className="text-[10px] font-black text-premium-primary uppercase tracking-widest ml-1">Your Concern</label>
             <textarea
               name="dentalConcern"
               required
               rows={2}
-              placeholder="Interested in Clear Aligners / Invisalign..."
-              className="w-full bg-gray-50/50 border border-premium-border rounded-[12px] p-4 text-premium-text font-bold placeholder:text-gray-300 focus:bg-white focus:border-premium-primary/50 focus:ring-4 focus:ring-premium-primary/5 transition-all outline-none resize-none"
+              className="w-full bg-premium-section border border-premium-border rounded-2xl p-5 text-premium-text font-bold focus:bg-white focus:border-premium-primary focus:ring-4 focus:ring-premium-primary/5 transition-all outline-none resize-none"
+              placeholder="Any specific questions about Invisalign?"
             ></textarea>
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-premium-gradient text-white py-5 rounded-[12px] font-bold text-xl shadow-premium hover:shadow-premium-lg hover:opacity-90 transition-all hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed tracking-wide"
+            className="w-full bg-premium-text text-white py-6 rounded-2xl font-black text-xl shadow-xl hover:bg-premium-primary transition-all active:scale-[0.98] disabled:opacity-50 tracking-tight"
           >
-            {isSubmitting ? 'Confirming...' : 'Book Appointment'}
+            {isSubmitting ? 'Confirming...' : 'Confirm My Consultation'}
           </button>
         </form>
-
       </div>
     </div>
   );
