@@ -24,65 +24,73 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-stretch gap-10 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-stretch gap-10 lg:gap-16 relative z-10">
           {/* Dr. Mohit Dhiman */}
-          <div className="flex flex-col md:flex-row gap-8 premium-card p-10 md:p-12 hover:shadow-premium-lg border-opacity-30">
-            <div className="w-full md:w-2/5 flex justify-center items-center">
-              <div className="relative w-full aspect-[4/5] rounded-[18px] overflow-hidden shadow-premium border border-premium-border/50">
-                <Image
-                  src="/images/doctor/dr mohit.png"
-                  alt="Dr. Mohit Dhiman"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 25vw"
-                  className="object-cover transition-transform duration-500 hover:scale-110"
-                />
+          <div className="group relative">
+            <div className="absolute -inset-[1px] bg-gradient-to-r from-premium-primary via-premium-accent to-premium-primary rounded-[30px] blur-[2px] opacity-20 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative flex flex-col md:flex-row gap-8 premium-card p-10 md:p-12 hover:shadow-premium-lg border-opacity-30 h-full overflow-hidden">
+              
+              <div className="w-full md:w-2/5 flex justify-center items-center">
+                <div className="relative w-full aspect-[4/5] rounded-[18px] overflow-hidden shadow-premium border border-premium-border/50">
+                  <Image
+                    src="/images/doctor/dr mohit.png"
+                    alt="Dr. Mohit Dhiman"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 25vw"
+                    className="object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="w-full md:w-3/5 text-center md:text-left flex flex-col justify-center">
-              <h3 className="text-2xl md:text-4xl font-black text-premium-text mb-3 tracking-tight">
-                Dr. Mohit Dhiman
-              </h3>
-              <p className="text-premium-accent font-bold text-xs md:text-sm uppercase tracking-[0.2em] mb-6">
-                Digital Smile Design Expert & Implant Specialist
-              </p>
-              <div className="text-premium-subtext text-sm md:text-base leading-relaxed space-y-4 font-medium italic">
-                <p>
-                  With over 15 years of clinical excellence, Dr. Mohit Dhiman (B.D.S., M.D.S.) is a lead specialist in <span className="text-premium-text font-bold">Prosthodontics & Implantology</span>.
+              <div className="w-full md:w-3/5 text-center md:text-left flex flex-col justify-center">
+                <h3 className="text-2xl md:text-4xl font-black text-premium-text mb-3 tracking-tight">
+                  Dr. Mohit Dhiman
+                </h3>
+                <p className="text-premium-accent font-bold text-xs md:text-sm uppercase tracking-[0.2em] mb-6">
+                  Digital Aligner Strategist & Clinical Director
                 </p>
-                <p>
-                  He has served at premier institutes like PGIMER Chandigarh, Maulana Azad, and RML Hospital. Certified Nobel Biocare specialist.
-                </p>
+                <div className="text-premium-subtext text-sm md:text-base leading-relaxed space-y-4 font-medium italic">
+                  <p>
+                    With 18+ years of clinical leadership, Dr. Mohit Dhiman is a pioneer in <span className="text-premium-text font-bold uppercase tracking-tight">Digital Aligner Case Selection & Planning</span>. 
+                  </p>
+                  <p>
+                    Having served at India's most prestigious institutes (Maulana Azad, RML, and PGIMER Chandigarh), he brings a high-precision digital approach to clear aligner therapy, ensuring every scan translates into a predictable, perfect smile.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Dr. Sombir Singh */}
-          <div className="flex flex-col md:flex-row gap-8 premium-card p-10 md:p-12 hover:shadow-premium-lg border-opacity-30">
-            <div className="w-full md:w-2/5 flex justify-center items-center">
-              <div className="relative w-full aspect-[4/5] rounded-[18px] overflow-hidden shadow-premium border border-premium-border/50">
-                <Image
-                  src="/images/doctor/dr sombir singh.jpg"
-                  alt="Dr. Sombir Singh"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 25vw"
-                  className="object-cover transition-transform duration-500 hover:scale-110"
-                />
+          <div className="group relative">
+            <div className="absolute -inset-[1px] bg-gradient-to-r from-premium-accent via-premium-primary to-premium-accent rounded-[30px] blur-[2px] opacity-20 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative flex flex-col md:flex-row gap-8 premium-card p-10 md:p-12 hover:shadow-premium-lg border-opacity-30 h-full overflow-hidden">
+              
+              <div className="w-full md:w-2/5 flex justify-center items-center">
+                <div className="relative w-full aspect-[4/5] rounded-[18px] overflow-hidden shadow-premium border border-premium-border/50">
+                  <Image
+                    src="/images/doctor/dr sombir singh.jpg"
+                    alt="Dr. Sombir Singh"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 25vw"
+                    className="object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="w-full md:w-3/5 text-center md:text-left flex flex-col justify-center">
-              <h3 className="text-2xl md:text-4xl font-black text-premium-text mb-3 tracking-tight">
-                Dr. Sombir Singh
-              </h3>
-              <p className="text-premium-accent font-bold text-xs md:text-sm uppercase tracking-[0.2em] mb-6">
-                Orthodontist & Diamond Black Invisalign Provider
-              </p>
-              <div className="text-premium-subtext text-sm md:text-base leading-relaxed space-y-4 font-medium italic">
-                <p>
-                  Dr. Sombir Singh is a <span className="text-premium-text font-bold">Diamond Black Invisalign Provider</span> and an MDS from PGIMER Chandigarh.
+              <div className="w-full md:w-3/5 text-center md:text-left flex flex-col justify-center">
+                <h3 className="text-2xl md:text-4xl font-black text-premium-text mb-3 tracking-tight">
+                  Dr. Sombir Singh
+                </h3>
+                <p className="text-premium-accent font-bold text-xs md:text-sm uppercase tracking-[0.2em] mb-6">
+                  Diamond Black Invisalign Provider & Orthodontist
                 </p>
-                <p>
-                  With 15+ years of clinical experience, he specialize in advanced orthodontics and dentofacial orthopedics.
-                </p>
+                <div className="text-premium-subtext text-sm md:text-base leading-relaxed space-y-4 font-medium italic">
+                  <p>
+                    Recognized as a <span className="text-premium-text font-bold uppercase tracking-tight">Diamond Black Invisalign Provider (Top 1% Global Tier)</span>, Dr. Sombir Singh is North India's premier orthodontist.
+                  </p>
+                  <p>
+                    An MDS from PGIMER Chandigarh with 15+ years of specialized orthodontic excellence, he has successfully transformed 5000+ smiles using advanced dentofacial orthopedics and clear aligner technology.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -93,7 +101,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
             onClick={onBookAppointment}
             className="px-10 py-5 bg-premium-gradient text-white rounded-[12px] font-bold text-xl shadow-premium hover:shadow-premium-lg hover:opacity-90 transition-all hover:scale-[1.03] tracking-wide"
           >
-            Schedule Consultation
+            Start Your Invisalign Journey
           </button>
         </div>
       </div>

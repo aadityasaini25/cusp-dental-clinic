@@ -24,6 +24,8 @@ export default function Home() {
   const minutes = Math.floor(remainingSeconds / 60);
   const seconds = remainingSeconds % 60;
 
+
+  // Scroll handler for sticky CTA
   // Countdown timer effect
   useEffect(() => {
     const timer = setInterval(() => {
@@ -37,8 +39,6 @@ export default function Home() {
 
     return () => clearInterval(timer);
   }, []);
-
-  // Scroll handler for sticky CTA
   useEffect(() => {
     const handleScroll = () => {
       setShowStickyCta(window.scrollY > 300);

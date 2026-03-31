@@ -9,7 +9,7 @@ export default function FAQSection() {
     {
       question: "Who are the specialists at Cusp Dental Clinic?",
       answer:
-        "Our team consists of elite specialists from India's most prestigious institutes, including AIIMS, PGI Chandigarh, Maulana Azad, and Army Dental College, ensuring you receive the highest standard of multi-specialty care.",
+        "Our team consists of elite specialists from India's most prestigious institutes, including AIIMS, PGI Chandigarh, Maulana Azad, and Army Dental College, ensuring you receive the highest standard of specialized orthodontic care.",
     },
     {
       question: "What makes Cusp Dental Clinic's Invisalign treatment unique?",
@@ -24,7 +24,7 @@ export default function FAQSection() {
     {
       question: "Do you offer flexible payment or EMI options?",
       answer:
-        "Yes, we believe premium dental care should be accessible. We offer No-Cost EMI options and flexible payment plans to suit your budget.",
+        "Yes, we believe premium Invisalign care should be accessible. We offer No-Cost EMI options and flexible payment plans to suit your budget.",
     }
   ];
 

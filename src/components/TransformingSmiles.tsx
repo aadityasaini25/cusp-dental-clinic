@@ -11,7 +11,7 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
         <u>Transforming Smiles</u>
       </h2>
       <p className="text-center text-premium-accent font-bold mb-6 md:text-lg">
-        Witness the before and after the magic of our Painless Dental Implants!
+        Witness the before and after the magic of our Invisalign & Clear Aligners!
       </p>
 
       <div className="grid md:grid-cols-2 gap-6">

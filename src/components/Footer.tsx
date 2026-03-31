@@ -17,7 +17,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-premium-subtext font-medium leading-relaxed text-sm max-w-xs italic">
-              Multi-Specialty Advanced Digital Dentistry. Diamond Black Invisalign Provider in Gurugram.
+              Advanced Digital Orthodontics & Aligner Center. Diamond Black Invisalign Provider in Gurugram.
             </p>
           </div>
 

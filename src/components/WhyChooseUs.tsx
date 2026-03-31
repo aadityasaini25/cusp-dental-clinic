@@ -13,7 +13,7 @@ const points = [
   },
   {
     title: "Fully Digital Workflow & Easy EMI",
-    desc: "From Free Scan & Simulation (Invisalign & Digital Smile Design) to your final treatment, everything is digitally planned. We also offer No-Cost EMI options to make premium care accessible.",
+    desc: "From Free Scan & Simulation (Invisalign & Clear Aligner Simulation) to your final treatment, everything is digitally planned. We also offer No-Cost EMI options to make premium care accessible.",
   },
 ];
 

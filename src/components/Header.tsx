@@ -49,7 +49,7 @@ export default function Header({ onBookAppointment }: HeaderProps) {
             onClick={onBookAppointment}
             className="px-5 py-2.5 sm:px-7 sm:py-3 bg-premium-gradient text-white rounded-[12px] text-xs font-bold shadow-premium hover:shadow-premium-lg hover:opacity-90 hover:scale-[1.03] transition-all tracking-wide"
           >
-            Book Appointment
+            Book Invisalign Scan
           </button>
         </div>
       </div>

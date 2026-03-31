@@ -20,7 +20,7 @@ export default function StickyCTA({ isVisible, onBookAppointment }: StickyCtaPro
         aria-label="Expand Book Appointment"
       >
         <span className="text-xl">📅</span>
-        <span className="hidden sm:inline font-bold text-xs tracking-widest uppercase pl-1">Book Today</span>
+        <span className="hidden sm:inline font-bold text-xs tracking-widest uppercase pl-1">Invisalign Scan</span>
       </button>
     );
   }
@@ -44,7 +44,7 @@ export default function StickyCTA({ isVisible, onBookAppointment }: StickyCtaPro
             onClick={onBookAppointment}
             className="flex-1 md:flex-none bg-premium-gradient text-white px-10 py-4 rounded-[12px] font-bold text-sm tracking-wide shadow-premium hover:shadow-xl hover:opacity-90 transition-all hover:scale-[1.02]"
           >
-            Confirm Appointment
+            Book Invisalign Scan
           </button>
           <a
             href="tel:+919599508322"

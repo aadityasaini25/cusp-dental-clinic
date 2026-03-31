@@ -16,15 +16,15 @@ export default function ServiceHighlights() {
       ],
     },
     {
-      title: "Digital Smile Design",
+      title: "Invisalign Outcome Simulation",
       image: "/images/implant/smile_design.png",
       description:
-        "Complete smile makeovers designed digitally before any treatment begins.",
+        "See your future smile in minutes with our high-end 3D iTero digital simulation technology.",
       benefits: [
-        "Preview your new smile",
-        "Custom veneers and crowns",
-        "Personalized to your facial features",
-        "Predictable aesthetic outcomes",
+        "Instant 3D smile preview",
+        "Digital tooth movement tracking",
+        "Personalized treatment sequence",
+        "Predictable aesthetic results",
       ],
     },
     {
@@ -41,16 +41,16 @@ export default function ServiceHighlights() {
       ],
     },
     {
-      title: "Elite Multi-Specialty Care",
+      title: "Advanced Orthodontic Support",
       image: "/images/implant/elite_aligner_new.png",
       description:
-        "Comprehensive dental needs addressed safely under one roof by a powerhouse team of elite specialists from AIIMS & PGI.",
+        "Expert orthodontic care specifically optimized for clear aligner patients, led by elite specialists.",
       benefits: [
-        "18+ Years of Clinical Excellence",
-        "AIIMS/PGI specialist consultants",
-        "No-Cost EMI Options Available",
-        "Root canals & pediatric dentistry",
-        "Periodontal (gum) therapy",
+        "15+ Years Orthodontic Expertise",
+        "PGI Chandigarh specialist lead",
+        "Advanced bite & jaw correction",
+        "Complex case management",
+        "Retainers & post-aligner care",
       ],
     },
   ];

@@ -24,7 +24,7 @@ export default function AboutSection() {
             <h3 className="text-3xl md:text-5xl font-black text-premium-text mb-10 tracking-tight leading-tight">Advanced Digital Dentistry</h3>
             <div className="space-y-8">
               <p className="text-xl text-premium-subtext leading-relaxed font-medium">
-                Our clinic is guided by <strong className="text-premium-text font-bold">Dr. Mohit Dhiman</strong>, a recognized leader in <strong className="text-premium-primary">Digital Smile Design & Implants</strong>, alongside <strong className="text-premium-text font-bold">Dr. Sombir Singh</strong>, North India's premier <strong className="text-premium-accent font-bold">Diamond Black Invisalign Provider</strong>.
+                Our clinic is guided by <strong className="text-premium-text font-bold">Dr. Mohit Dhiman</strong>, a recognized leader in <strong className="text-premium-primary">Invisalign & Digital Orthodontics</strong>, alongside <strong className="text-premium-text font-bold">Dr. Sombir Singh</strong>, North India's premier <strong className="text-premium-accent font-bold">Diamond Black Invisalign Provider</strong>.
               </p>
               <p className="text-xl text-premium-subtext leading-relaxed font-medium">
                 Supported by a team of specialists from India's most prestigious institutes (PGI Chandigarh, AIIMS, and Army Dental College), we bring a <span className="bg-premium-section px-3 py-1 rounded-lg text-premium-primary font-bold">100% digital workflow</span> ensuring precision and aesthetic excellence in every procedure.
@@ -39,11 +39,11 @@ export default function AboutSection() {
             <ul className="space-y-6">
               {[
                 "Invisalign (Diamond Black Provider)",
-                "Digital Smile Design",
-                "Advanced Digital Implants",
-                "Full Mouth Rehabilitation",
+                "Full Mouth Calibration",
+                "Advanced Clear Aligners",
+                "Digital Bite Analysis",
                 "Painless Sedation Dentistry",
-                "Multi-Specialty Child Care"
+                "Orthodontic Child Care"
               ].map((item, index) => (
                 <li key={index} className="flex items-center gap-4 text-lg text-premium-subtext font-bold">
                   <span className="w-7 h-7 rounded-full bg-premium-section flex items-center justify-center text-premium-primary text-sm shadow-sm">✓</span>
@@ -61,7 +61,7 @@ export default function AboutSection() {
                 {[
                   "Diamond Black Invisalign Expertise",
                   "15+ Years Clinical Excellence",
-                  "Digital Smile Design Authority",
+                  "Clear Aligner Specialist",
                   "PGI / AIIMS / Army Dental Specialists"
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-4 text-lg text-premium-subtext font-bold">

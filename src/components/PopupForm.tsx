@@ -78,16 +78,7 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
           >
             <span className="text-xl pointer-events-none">✕</span>
           </button>
-        </div>
-
-        {/* Offer info */}
-        <div className="bg-premium-section/50 p-5 md:p-6 rounded-[16px] mb-8 border border-premium-border">
-          <p className="text-[15px] text-premium-subtext text-center font-bold">
-            <span className="text-premium-text">Includes:</span> Specialist Consultation & <span className="text-premium-primary underline decoration-premium-accent/30 decoration-2 underline-offset-4">Free Digital Scan</span>
-          </p>
-        </div>
-
-        {/* Countdown */}
+        </div>        {/* Countdown */}
         <div className="bg-white border-2 border-premium-primary/10 text-premium-text p-6 rounded-[20px] mb-10 text-center shadow-sm relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-1 h-full bg-premium-primary"></div>
           <p className="text-[10px] uppercase tracking-widest text-premium-primary font-black mb-2">⏱️ Priority Slot Expires In</p>
