@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-8">
             <h3 className="text-premium-primary font-black text-xs uppercase tracking-[0.2em]">Contact Us</h3>
             <div className="space-y-4">
-              <a href="tel:+919599508322" className="block text-3xl font-black hover:text-premium-primary transition-colors">+91 9599508322</a>
+              <a href="tel:+919599508322" className="block text-3xl font-black hover:text-premium-primary transition-colors whitespace-nowrap">+91 9599508322</a>
               <a href="mailto:drmohit.connect@gmail.com" className="block text-slate-400 hover:text-white transition-colors font-medium">drmohit.connect@gmail.com</a>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function Footer() {
         </div>
 
         {/* Map Embed Container */}
-        <div className="relative h-[350px] w-full rounded-[40px] overflow-hidden border border-slate-700/50 mb-20 group">
+        <div className="relative h-[280px] w-full max-w-5xl mx-auto rounded-[32px] overflow-hidden border border-slate-700/50 mb-20 group">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28069.507098008497!2d77.0606663743164!3d28.428658099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19661ee54343%3A0x8b0b26d4b69f5acf!2sCusp%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1772804934884!5m2!1sen!2sin"
             width="100%"
@@ -75,7 +75,7 @@ export default function Footer() {
             referrerPolicy="no-referrer-when-downgrade"
             className="filter grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000"
           ></iframe>
-          <div className="absolute inset-0 pointer-events-none border-[16px] border-[#0F172A] rounded-[40px]"></div>
+          <div className="absolute inset-0 pointer-events-none border-[12px] border-[#0F172A] rounded-[32px]"></div>
         </div>
 
         {/* Bottom Bar */}
