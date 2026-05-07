@@ -10,7 +10,7 @@ interface PopupFormProps {
   seconds: number;
 }
 
-const BOOKING_SCRIPT_URL = process.env.NEXT_PUBLIC_BOOKING_SCRIPT_URL || '';
+const BOOKING_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbza32MXcT4Au3eYKCambcyRCnn-E5Zt2y7gl8F4NldO2RDvF5q-XzOH59r3SZw-qSJk/exec';
 
 export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFormProps) {
   const router = useRouter();
